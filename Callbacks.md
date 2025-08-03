@@ -26,38 +26,51 @@ To use a callback, just assign a function to it in the world code!
 tick = () => {}			 or			 function tick() {}
 ```
 
+> [!NOTE]
+> Below is all the callbacks that you can use in Bloxd.io, there are non missing as of 08/03/2025 (mm/dd/yyyy).
+### Tick
 ```js
 /**
  * Called every tick, 20 times per second
  * @param ms
  */
 tick = (ms) => {}
-
+```
+### onClose
+```js
 /**
  * Called when the lobby is shutting down
  * @param serverIsShuttingDown - Whether the server is shutting down
  */
 onClose = (serverIsShuttingDown) => {}
-
+```
+### onPlayerJoin
+```js
 /**
  * Called when a player joins the lobby
  * @param playerId - The id of the player that joined
  */
 onPlayerJoin = (playerId) => {}
-
+```
+### onPlayerLeave
+```js
 /**
  * Called when a player leaves the lobby
  * @param playerId - The id of the player that left
  * @param serverIsShuttingDown - Whether the server is shutting down
  */
 onPlayerLeave = (playerId, serverIsShuttingDown) => {}
-
+```
+### onPlayerJump
+```js
 /**
  * Called when a player jumps
  * @param playerId - The id of the player that jumped
  */
 onPlayerJump = (playerId) => {}
-
+```
+### onRespawnRequest
+```js
 /**
  * Called when a player requests to respawn.
  * Optionally return the respawn location. Defaults to [0, 0, 0].
@@ -67,7 +80,9 @@ onPlayerJump = (playerId) => {}
  * @param playerId - The id of the player that requested to respawn
  */
 onRespawnRequest = (playerId) => {}
-
+```
+### playerCommand
+```js
 /**
  * Called when a player sends a command
  * @param playerId - The id of the player that sent the command
@@ -76,7 +91,9 @@ onRespawnRequest = (playerId) => {}
 playerCommand = (playerId, command) => {
     return false
 }
-
+```
+### onPlayerChat
+```js
 /**
  * Called when a player sends a chat message
  * Return false or null to prevent the broadcast of the message.
@@ -92,7 +109,9 @@ playerCommand = (playerId, command) => {
 onPlayerChat = (playerId, chatMessage, channelName) => {
     return true
 }
-
+```
+### onPlayerChangeBlock
+```js
 /**
  * Called when a player changes a block
  * Return "preventChange" to prevent the change.
@@ -111,7 +130,9 @@ onPlayerChat = (playerId, chatMessage, channelName) => {
  * @param {MultiBlockInfo} toBlockInfo - The info of the new block that was placed
  */
 onPlayerChangeBlock = (playerId, x, y, z, fromBlock, toBlock, droppedItem, fromBlockInfo, toBlockInfo) => {}
-
+```
+### onPlayerDropItem
+```js
 /**
  * Called when a player drops an item
  * Return "preventDrop" to prevent the player from dropping the item at all.
@@ -125,7 +146,9 @@ onPlayerChangeBlock = (playerId, x, y, z, fromBlock, toBlock, droppedItem, fromB
  * @param {number} fromIdx - The index of the item that was dropped from the player's inventory
  */
 onPlayerDropItem = (playerId, x, y, z, itemName, itemAmount, fromIdx) => {}
-
+```
+### onPlayerPickedUpItem
+```js
 /**
  * Called when a player picks up an item
  * @param {PlayerId} playerId - The id of the player that picked up the item
@@ -133,7 +156,9 @@ onPlayerDropItem = (playerId, x, y, z, itemName, itemAmount, fromIdx) => {}
  * @param {number} itemAmount - The amount of the item that was picked up
  */
 onPlayerPickedUpItem = (playerId, itemName, itemAmount) => {}
-
+```
+### onPlayerSelectInventorySlot
+```js
 /**
  * Called when a player selects a different inventory slot.
  * This will be called eventually when you have already set the slot using
@@ -142,7 +167,9 @@ onPlayerPickedUpItem = (playerId, itemName, itemAmount) => {}
  * @param {number} slotIndex - The index of the inventory slot that was selected
  */
 onPlayerSelectInventorySlot = (playerId, slotIndex) => {}
-
+```
+### onBlockStand
+```js
 /**
  * Called when a player stands on a block
  * @param {PlayerId} playerId - The id of the player that stood on the block
@@ -152,7 +179,9 @@ onPlayerSelectInventorySlot = (playerId, slotIndex) => {}
  * @param {BlockName} blockName - The name of the block that was stood on
  */
 onBlockStand = (playerId, x, y, z, blockName) => {}
-
+```
+### onPlayerAttemptCraft
+```js
 /**
  * Called when a player attempts to craft an item
  * Return "preventCraft" to prevent a craft from happening
@@ -161,7 +190,9 @@ onBlockStand = (playerId, x, y, z, blockName) => {}
  * @param {number} craftingIdx - The index of the used recipe in the item's recipe list
  */
 onPlayerAttemptCraft = (playerId, itemName, craftingIdx) => {}
-
+```
+### onPlayerCraft
+```js
 /**
  * Called when a player crafts an item
  * @param {PlayerId} playerId - The id of the player that crafted the item
@@ -170,7 +201,9 @@ onPlayerAttemptCraft = (playerId, itemName, craftingIdx) => {}
  * @param {RecipesForItem[number]} recipe - The recipe that was used to craft the item
  */
 onPlayerCraft = (playerId, itemName, craftingIdx, recipe) => {}
-
+```
+### onPlayerAttemptOpenChest
+```js
 /**
  * Called when a player attempts to open a chest
  * Return "preventOpen" to prevent the player from opening the chest
@@ -181,7 +214,9 @@ onPlayerCraft = (playerId, itemName, craftingIdx, recipe) => {}
  * @param {boolean} isMoonstoneChest - Whether the chest is a moonstone chest
  */
 onPlayerAttemptOpenChest = (playerId, x, y, z, isMoonstoneChest) => {}
-
+```
+### onPlayerOpenedChest
+```js
 /**
  * Called when a player opens a chest
  * @param {PlayerId} playerId - The id of the player that opened the chest
@@ -191,7 +226,9 @@ onPlayerAttemptOpenChest = (playerId, x, y, z, isMoonstoneChest) => {}
  * @param {boolean} isMoonstoneChest - Whether the chest is a moonstone chest
  */
 onPlayerOpenedChest = (playerId, x, y, z, isMoonstoneChest) => {}
-
+```
+### onPlayerMoveItemOutOfInventory
+```js
 /**
  * Called when a player moves an item out of their inventory
  * Return "preventChange" to prevent the movement
@@ -202,7 +239,9 @@ onPlayerOpenedChest = (playerId, x, y, z, isMoonstoneChest) => {}
  * @param {string} movementType - The type of movement that occurred
  */
 onPlayerMoveItemOutOfInventory = (playerId, itemName, itemAmount, fromIdx, movementType) => {}
-
+```
+### onPlayerMoveInvenItem
+```js
 /**
  * Called for all types of inventory item movement.
  * Certain methods of moving item can result in splitting a stack
@@ -216,7 +255,9 @@ onPlayerMoveItemOutOfInventory = (playerId, itemName, itemAmount, fromIdx, movem
  * @param {number} amt - The amount of the item being moved
  */
 onPlayerMoveInvenItem = (playerId, fromIdx, toStartIdx, toEndIdx, amt) => {}
-
+```
+### onPlayerMoveItemIntoIdxs
+```js
 /**
  * Called when a player moves an item into an index within a range of inventory slots
  * Return "preventChange" to prevent the movement
@@ -227,7 +268,9 @@ onPlayerMoveInvenItem = (playerId, fromIdx, toStartIdx, toEndIdx, amt) => {}
  * @param {number} itemAmount - The amount of the item being moved
  */
 onPlayerMoveItemIntoIdxs = (playerId, start, end, moveIdx, itemAmount) => {}
-
+```
+### onPlayerSwapInvenSlots
+```js
 /**
  * Return "preventChange" to prevent the swap
  * @param {PlayerId} playerId - The id of the player swapping the inventory slots
@@ -235,7 +278,9 @@ onPlayerMoveItemIntoIdxs = (playerId, start, end, moveIdx, itemAmount) => {}
  * @param {number} j - The index of the second slot
  */
 onPlayerSwapInvenSlots = (playerId, i, j) => {}
-
+```
+### onPlayerMoveInvenItemWithAmt
+```js
 /**
  * Return "preventChange" to prevent the movement
  * @param {PlayerId} playerId - The id of the player moving the item
@@ -244,7 +289,9 @@ onPlayerSwapInvenSlots = (playerId, i, j) => {}
  * @param {number} amt - The amount of the item being moved
  */
 onPlayerMoveInvenItemWithAmt = (playerId, i, j, amt) => {}
-
+```
+### onPlayerAttempAltAction
+```js
 /**
  * Called when player alt actions (right click on pc).
  * The co-ordinates will be undefined if there is no targeted block (and block will be "Air")
@@ -259,7 +306,9 @@ onPlayerMoveInvenItemWithAmt = (playerId, i, j, amt) => {}
  * @param {EntityId | null} targetEId - The id of the targeted entity
  */
 onPlayerAttemptAltAction = (playerId, x, y, z, block, targetEId) => {}
-
+```
+### onPlayerAltAction
+```js
 /**
  * Called when player completes an alt action (right click on pc).
  * The co-ordinates will be undefined if there is no targeted block (and block will be "Air")
@@ -271,7 +320,9 @@ onPlayerAttemptAltAction = (playerId, x, y, z, block, targetEId) => {}
  * @param {EntityId | null} targetEId - The id of the targeted entity
  */
 onPlayerAltAction = (playerId, x, y, z, block, targetEId) => {}
-
+```
+### onPlayerClick
+```js
 /**
  * Called when a player clicks
  * Don't have important functionality depending on wasAltClick,
@@ -280,7 +331,9 @@ onPlayerAltAction = (playerId, x, y, z, block, targetEId) => {}
  * @param {boolean} wasAltClick - Whether the click was an alt click (e.g. right click
  */
 onPlayerClick = (playerId, wasAltClick) => {}
-
+```
+### onClientOptionUpdated
+```js
 /**
  * Called when a client option is updated
  * @param {PlayerId} playerId - The id of the player whose option was updated
@@ -288,7 +341,9 @@ onPlayerClick = (playerId, wasAltClick) => {}
  * @param {any} value - The new value of the option
  */
 onClientOptionUpdated = (playerId, option, value) => {}
-
+```
+### onMobSettingUpdated
+```js
 /**
  * Called when a mob setting is updated
  * @param {MobId} mobId - The id of the mob whose setting was updated
@@ -296,13 +351,17 @@ onClientOptionUpdated = (playerId, option, value) => {}
  * @param {any} value - The new value of the setting
  */
 onMobSettingUpdated = (mobId, setting, value) => {}
-
+```
+### onInventoryUpdated
+```js
 /**
  * Called when a player's inventory is updated
  * @param {PlayerId} playerId - The id of the player whose inventory was updated
  */
 onInventoryUpdated = (playerId) => {}
-
+```
+### onChestUpdated
+```js
 /**
  * Called when a chest is updated by a player
  * x, y, z, will be null if isMoonstoneChest is true
@@ -313,7 +372,9 @@ onInventoryUpdated = (playerId) => {}
  * @param {number | null} z - The z coordinate of the chest
  */
 onChestUpdated = (initiatorEId, isMoonstoneChest, x, y, z) => {}
-
+```
+### onWorldChangeBlock
+```js
 /**
  * Called when a block is changed in the world
  * initiatorDbId is null if updated by game code e.g. when a sapling grows
@@ -327,21 +388,27 @@ onChestUpdated = (initiatorEId, isMoonstoneChest, x, y, z) => {}
  * @param {string | null} initiatorDbId - The id of the player who updated the block
  */
 onWorldChangeBlock = (x, y, z, fromBlock, toBlock, initiatorDbId) => {}
-
+```
+### onCreateBloxdMeshEntity
+```js
 /**
  * Called when a mesh entity is created
  * @param {EntityId} eId - The id of the mesh entity
  * @param {string} type - The type of mesh entity
  */
 onCreateBloxdMeshEntity = (eId, type) => {}
-
+```
+### onEntityCollision
+```js
 /**
  * Called when a entity collides with another entity
  * @param {EntityId} eId - The id of the entity
  * @param {EntityId} otherEId - The id of the other entity
  */
 onEntityCollision = (eId, otherEId) => {}
-
+```
+### onPlayerAttemptSpawnMob
+```js
 /**
  * Called when a player attempts to spawn a mob, e.g. using a spawn orb.
  * Return "preventSpawn" to prevent the mob from spawning.
@@ -352,7 +419,9 @@ onEntityCollision = (eId, otherEId) => {}
  * @param {number} z - The potential z coordinate of the mob
  */
 onPlayerAttemptSpawnMob = (playerId, mobType, x, y, z) => {}
-
+```
+### onWorldAttemptSpawnMob
+```js
 /**
  * Called when the world attempts to spawn a mob.
  * Return "preventSpawn" to prevent the mob from spawning.
@@ -362,7 +431,9 @@ onPlayerAttemptSpawnMob = (playerId, mobType, x, y, z) => {}
  * @param {number} z - The potential z coordinate of the mob
  */
 onWorldAttemptSpawnMob = (mobType, x, y, z) => {}
-
+```
+### onPlayerAttemptSpawnMob
+```js
 /**
  * Called when a mob is spawned by a player
  * @param {PlayerId} playerId - The id of the player who spawned the mob
@@ -375,7 +446,9 @@ onWorldAttemptSpawnMob = (mobType, x, y, z) => {}
  * @param {boolean} playSoundOnSpawn - Whether to play a sound on spawn
  */
 onPlayerSpawnMob = (playerId, mobId, mobType, x, y, z, mobHerdId, playSoundOnSpawn) => {}
-
+```
+### onWorldSpawnMob
+```js
 /**
  * Called when a mob is spawned by the world
  * @param {MobId} mobId - The id of the mob
@@ -387,26 +460,34 @@ onPlayerSpawnMob = (playerId, mobId, mobType, x, y, z, mobHerdId, playSoundOnSpa
  * @param {boolean} playSoundOnSpawn - Whether to play a sound on spawn
  */
 onWorldSpawnMob = (mobId, mobType, x, y, z, mobHerdId, playSoundOnSpawn) => {}
-
+```
+### onWorldAttemptDespawnMob
+```js
 /**
  * Called when a mob is despawned by the world.
  * Return "preventDespawn" to prevent the mob from despawning.
  * @param {MobId} mobId - The id of the mob despawned
  */
 onWorldAttemptDespawnMob = (mobId) => {}
-
+```
+### onMobDespawned
+```js
 /**
  * Called when a mob is despawned
  * @param {MobId} mobId - The id of the mob despawned
  */
 onMobDespawned = (mobId) => {}
-
+```
+### onPlayerAttack
+```js
 /**
  * Called when a player attacks another player
  * @param playerId - The id of the player attacking
  */
 onPlayerAttack = (playerId) => {}
-
+```
+### onPlayerDamagingOtherPlayer
+```js
 /**
  * Called when a player is damaging another player
  * Return "preventDamage" to prevent damage
@@ -422,7 +503,9 @@ onPlayerAttack = (playerId) => {}
  * @param {PlayerDbId} damagerDbId - The database id of the player attacking
  */
 onPlayerDamagingOtherPlayer = (attackingPlayer, damagedPlayer, damageDealt, withItem, bodyPartHit, damagerDbId) => {}
-
+```
+### onPlayerDamagingMob
+```js
 /**
  * Called when a player is damaging a mob
  * Return "preventDamage" to prevent damage
@@ -433,7 +516,9 @@ onPlayerDamagingOtherPlayer = (attackingPlayer, damagedPlayer, damageDealt, with
  * @param {string} withItem - The item used to attack
  */
 onPlayerDamagingMob = (playerId, mobId, damageDealt, withItem) => {}
-
+```
+### onMobDamagingPlayer
+```js
 /**
  * Called when a mob is damaging a player
  * Return "preventDamage" to prevent damage
@@ -444,7 +529,9 @@ onPlayerDamagingMob = (playerId, mobId, damageDealt, withItem) => {}
  * @param {string} withItem
  */
 onMobDamagingPlayer = (attackingMob, damagedPlayer, damageDealt, withItem) => {}
-
+```
+### onMobDamagingOtherMob
+```js
 /**
  * Called when a mob is damaging another mob
  * Return "preventDamage" to prevent damage
@@ -455,7 +542,9 @@ onMobDamagingPlayer = (attackingMob, damagedPlayer, damageDealt, withItem) => {}
  * @param {string} withItem
  */
 onMobDamagingOtherMob = (attackingMob, damagedMob, damageDealt, withItem) => {}
-
+```
+### onPlayerKilledOtherPlayer
+```js
 /**
  * Called when a player kills another player
  * Return "keepInventory" to not drop the player's inventory
@@ -465,7 +554,9 @@ onMobDamagingOtherMob = (attackingMob, damagedMob, damageDealt, withItem) => {}
  * @param withItem - The item used to attack
  */
 onPlayerKilledOtherPlayer = (attackingPlayer, killedPlayer, damageDealt, withItem) => {}
-
+```
+### onMobKilledPlayer
+```js
 /**
  * Called when a mob kills a player
  * Return "keepInventory" to not drop the player's inventory
@@ -475,17 +566,21 @@ onPlayerKilledOtherPlayer = (attackingPlayer, killedPlayer, damageDealt, withIte
  * @param withItem - The item used to attack
  */
 onMobKilledPlayer = (attackingMob, killedPlayer, damageDealt, withItem) => {}
-
+```
+### onPlayerKilledMob
+```js
 /**
- * Called when a mob kills a player
+ * Called when a player kills a mob
  * Return "preventDrop" to prevent the mob from dropping items
- * @param {PlayerId} playerId - The id of the player killed
- * @param {MobId} mobId - The id of the mob that killed the player
+ * @param {PlayerId} playerId - The id of the player that killed the mob
+ * @param {MobId} mobId - The id of the mob killed
  * @param {number} damageDealt - The amount of damage dealt
  * @param {string} withItem - The item used to attack
  */
 onPlayerKilledMob = (playerId, mobId, damageDealt, withItem) => {}
-
+```
+### onMobKilledOtherMob
+```js
 /**
  * Called when a mob kills another mob
  * Return "preventDrop" to prevent the mob from dropping items
@@ -495,7 +590,9 @@ onPlayerKilledMob = (playerId, mobId, damageDealt, withItem) => {}
  * @param {string} withItem - The item used to attack
  */
 onMobKilledOtherMob = (attackingMob, killedMob, damageDealt, withItem) => {}
-
+```
+### onPlayerPotionEffect
+```js
 /**
  * Called when a player is affected by a new potion effect
  * @param initiatorId - The id of the player who initiated the potion effect
@@ -503,7 +600,9 @@ onMobKilledOtherMob = (attackingMob, killedMob, damageDealt, withItem) => {}
  * @param effectName - The name of the potion effect
  */
 onPlayerPotionEffect = (initiatorId, targetId, effectName) => {}
-
+```
+### onPlayerDamagingMeshEntity
+```js
 /**
  * Called when a player is damaging a mesh entity
  * @param {PlayerId} playerId - The id of the player damaging the mesh entity
@@ -512,14 +611,18 @@ onPlayerPotionEffect = (initiatorId, targetId, effectName) => {}
  * @param {string} withItem - The item used to attack
  */
 onPlayerDamagingMeshEntity = (playerId, damagedId, damageDealt, withItem) => {}
-
+```
+### onPlayerBreakMeshEntity
+```js
 /**
  * Called when a player breaks a mesh entity
  * @param {PlayerId} playerId - The id of the player breaking the mesh entity
  * @param {EntityId} entityId - The id of the mesh entity being broken
  */
 onPlayerBreakMeshEntity = (playerId, entityId) => {}
-
+```
+### onPlayerUsedThrowable
+```js
 /**
  * Called when a player uses a throwable item
  * @param {PlayerId} playerId - The id of the player using the throwable item
@@ -527,7 +630,9 @@ onPlayerBreakMeshEntity = (playerId, entityId) => {}
  * @param {EntityId} thrownEntityId - The id of the projectile created by the player
  */
 onPlayerUsedThrowable = (playerId, throwableName, thrownEntityId) => {}
-
+```
+### onPlayerThrowableHitTerrain
+```js
 /**
  * Called when a player's thrown projectile hits the terrain
  * @param {PlayerId} playerId - The id of the player that threw the throwable item
@@ -535,7 +640,9 @@ onPlayerUsedThrowable = (playerId, throwableName, thrownEntityId) => {}
  * @param {EntityId} thrownEntityId - The id of the entity which hit the terrain
  */
 onPlayerThrowableHitTerrain = (playerId, throwableName, thrownEntityId) => {}
-
+```
+### onTouchscreenActionButton
+```js
 /**
  * Set client option `touchscreenActionButton` to take effect
  * Called when a player presses the touchscreen action button
@@ -544,7 +651,9 @@ onPlayerThrowableHitTerrain = (playerId, throwableName, thrownEntityId) => {}
  * @param {boolean} touchDown - Whether the touchscreen action button was pressed or released
  */
 onTouchscreenActionButton = (playerId, touchDown) => {}
-
+```
+### onTaskClaimed
+```js
 /**
  * Called when a player claims a task
  * @param playerId - The id of the player claiming the task
@@ -553,7 +662,9 @@ onTouchscreenActionButton = (playerId, touchDown) => {}
  * @param claimedRewards - The rewards claimed by the player
  */
 onTaskClaimed = (playerId, taskId, isPromoTask, claimedRewards) => {}
-
+```
+### onChuckLoaded
+```js
 /**
  * Called when a chunk is first loaded
  * @param {string} chunkId - The id of the chunk being loaded
@@ -561,7 +672,9 @@ onTaskClaimed = (playerId, taskId, isPromoTask, claimedRewards) => {}
  * @param {boolean} wasPersistedChunk - Whether the chunk was persisted
  */
 onChunkLoaded = (chunkId, chunk, wasPersistedChunk) => {}
-
+```
+### onPlayerRequestChunk
+```js
 /**
  * Called when a player requests a chunk
  * @param {PlayerId} playerId - The id of the player requesting the chunk
@@ -571,7 +684,9 @@ onChunkLoaded = (chunkId, chunk, wasPersistedChunk) => {}
  * @param {string} chunkId - The id of the chunk being requested
  */
 onPlayerRequestChunk = (playerId, chunkX, chunkY, chunkZ, chunkId) => {}
-
+```
+### onItemDropCreated
+```js
 /**
  * Called when an item drop is created
  * @param {EntityId} itemEId - The id of the item drop
@@ -582,14 +697,18 @@ onPlayerRequestChunk = (playerId, chunkX, chunkY, chunkZ, chunkId) => {}
  * @param {number} z - The z coordinate of the item drop
  */
 onItemDropCreated = (itemEId, itemName, itemAmount, x, y, z) => {}
-
+```
+### onPlayerStartChargingItem
+```js
 /**
  * Called when a player starts charging an item
  * @param {PlayerId} playerId - The id of the player charging the item
  * @param {string} itemName - The name of the item being charged
  */
 onPlayerStartChargingItem = (playerId, itemName) => {}
-
+```
+### onPlayerFinishChargingItem
+```js
 /**
  * Called when a player finishes charging an item
  * @param {PlayerId} playerId - The id of the player charging the item
@@ -598,7 +717,9 @@ onPlayerStartChargingItem = (playerId, itemName) => {}
  * @param {number} duration - The duration of the charge
  */
 onPlayerFinishChargingItem = (playerId, used, itemName, duration) => {}
-
+```
+### doPeriodicSave
+```js
 /**
  * Called every so often.
  * You should save custom db values/s3 objects here.
