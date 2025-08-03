@@ -20,6 +20,14 @@ Please create a pull request if you notice incorrect, or missing information in 
 - World owners can find these by searching in the creative menu
 - No need to add `press to code`, this text is only needed for code boards, and will automatically be removed
 - If you want to run code without opening the code editor, you can trigger the code block by right clicking an adjacent `press to code` board instead
+- Code Blocks can not use `callbacks` cause Code Blocks only run when pressed
+
+## World Code
+
+- World owners can access the World code editor by pressing F8 or by clicking the World Code button in the Code Block editor
+- Like Code Blocks there is no need to add `press to code`
+- Unlike Code Blocks, World Code can contain `callbacks` and will run the code inside of a callback when the callback is triggered
+- There is no way to trigger a Code Block or sign from World Code
 
 ## Boards
 
