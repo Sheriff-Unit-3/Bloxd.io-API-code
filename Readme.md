@@ -41,7 +41,7 @@ Please create a pull request if you notice incorrect, or missing information in 
 - Global variable `thisPos` stores the position of the currently executing code block or press to code board, it can not be used in World code.
 - You can use `api.log` or `console.log` for printing and debugging (they do the same thing).
 - You can use `Date.now()` instead of `api.now()` if you prefer, both return the time in milliseconds.
-- Comments like `/* comment */` work.
+- Comments like `/* comment */` and `// comment` work.
 
 > [!NOTE]
 > The official documentation will say that `// comments` will not work, but that is incorrect as they now work.
