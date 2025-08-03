@@ -1,8 +1,10 @@
 # Readme
 > [!NOTE]
-> This is not the official documentation and is not edited or run by any of Bloxd.io's Devs, this is ment to be an additional resource to the official documentation.  
+> This is not the official documentation and is not edited or run by any of Bloxd.io's Devs, this is ment to be an additional resource to the official documentation.
+ 
 > [!WARNING]
-> This repository may contain out-of-date or incorrect information at times, but the maintaners will try to keep this as up-to-date and correct as they can.  
+> This repository may contain out-of-date or incorrect information at times, but the maintaners will try to keep this as up-to-date and correct as they can.
+
 > [!TIP]
 > Find information that you think should be added or changed? Create a pull request!
 
