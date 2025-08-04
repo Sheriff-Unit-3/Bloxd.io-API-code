@@ -20,7 +20,9 @@ Global object `api` has the following methods:
  * @returns {[number, number, number]}
  */
 getPosition(entityId)
+```
 
+```js
 /**
  * Set position of a player / entity.
  * @param {EntityId} entityId
@@ -30,7 +32,9 @@ getPosition(entityId)
  * @returns {void}
  */
 setPosition(entityId, x, y, z)
+```
 
+```js
 /**
  * Get the up to 12 unit co-ordinates the lifeform is located within
  * (A lifeform is modelled as having four corners and can be in up to 3 blocks vertically)
@@ -39,14 +43,18 @@ setPosition(entityId, x, y, z)
  * @returns {number[][]} - List of x, y, z positions e.g. [[-1, 0, 0], [-1, 1, 0], [-1, 2, 0]]
  */
 getUnitCoordinatesLifeformWithin(lifeformId)
+```
 
+```js
 /**
  * Get the current shield of an entity.
  * @param {EntityId} entityId
  * @returns {number}
  */
 getShieldAmount(entityId)
+```
 
+```js
 /**
  * Set the current shield of a lifeform.
  *
@@ -55,14 +63,18 @@ getShieldAmount(entityId)
  * @returns {void}
  */
 setShieldAmount(lifeformId, newShieldAmount)
+```
 
+```js
 /**
  * Get the current health of an entity.
  * @param {PlayerId} entityId
  * @returns {number}
  */
 getHealth(entityId)
+```
 
+```js
 /**
  * @param {LifeformId} lifeformId
  * @param {number} changeAmount - Must be an integer. A positive amount will increase the entity's health. A negative amount will decrease the entity's shield first, then their health.
@@ -71,7 +83,9 @@ getHealth(entityId)
  * @returns {boolean} - Whether the entity was killed
  */
 applyHealthChange(lifeformId, changeAmount, whoDidDamage, broadcastLifeformHurt)
+```
 
+```js
 /**
  * Set the current health of an entity.
  * If you want to set their health to more than their current max health, the optional increaseMaxHealthIfNeeded must be true.
@@ -83,7 +97,9 @@ applyHealthChange(lifeformId, changeAmount, whoDidDamage, broadcastLifeformHurt)
  * @returns {boolean} - Whether this change in health killed the player
  */
 setHealth(entityId, newHealth, whoDidDamage, increaseMaxHealthIfNeeded)
+```
 
+```js
 /**
  * Make it as if hittingEId hit hitEId
  *
@@ -94,7 +110,9 @@ setHealth(entityId, newHealth, whoDidDamage, increaseMaxHealthIfNeeded)
  * @returns {void}
  */
 applyMeleeHit(hittingEId, hitEId, dirFacing, bodyPartHit)
+```
 
+```js
 /**
  * Apply damage to a lifeform.
  * eId is the player initiating the damage, hitEId is the lifeform being hit.
@@ -139,7 +157,9 @@ attemptApplyDamage({
     isTrueDamage = false,
     damagerDbId = null,
     })
+```
 
+```js
 /**
  * Kill a lifeform.
  * @param {LifeformId} lifeformId
@@ -147,7 +167,9 @@ attemptApplyDamage({
  * @returns {void}
  */
 killLifeform(lifeformId, whoKilled)
+```
 
+```js
 /**
  * Whether a lifeform is alive or dead (or on the respawn screen, in a player's case).
  *
@@ -155,7 +177,9 @@ killLifeform(lifeformId, whoKilled)
  * @returns {boolean}
  */
 isAlive(lifeformId)
+```
 
+```js
 /**
  * Set a player's other-entity setting for a specific entity.
  *
@@ -166,7 +190,9 @@ isAlive(lifeformId)
  * @returns {void}
  */
 setOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName, settingValue)
+```
 
+```js
 /**
  * Set many of a player's other-entity settings for a specific entity.
  *
@@ -176,7 +202,9 @@ setOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName, settingVa
  * @returns {void}
  */
 setOtherEntitySettings(relevantPlayerId, targetedEntityId, settingsObject)
+```
 
+```js
 /**
  * Get the value of a player's other-entity setting for a specific entity.
  *
@@ -186,14 +214,18 @@ setOtherEntitySettings(relevantPlayerId, targetedEntityId, settingsObject)
  * @returns {OtherEntitySettings[Setting]}
  */
 getOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName)
+```
 
+```js
 /**
  * Get the in game name of an entity.
  * @param {EntityId} entityId
  * @returns {string}
  */
 getEntityName(entityId)
+```
 
+```js
 /**
  * Check your game (and, optionally, a entity) is still valid and executing.
  * Useful if you're using async functions and await within your game.
@@ -204,7 +236,9 @@ getEntityName(entityId)
  * @returns {boolean}
  */
 checkValid(entityId)
+```
 
+```js
 /**
  * Get the entities in the rect between [minX, minY, minZ] and [maxX, maxY, maxZ]
  *
@@ -213,13 +247,17 @@ checkValid(entityId)
  * @returns {EntityId[]}
  */
 getEntitiesInRect(minCoords, maxCoords)
+```
 
+```js
 /**
  * @param {EntityId} entityId
  * @returns {EntityType}
  */
 getEntityType(entityId)
+```
 
+```js
 /**
  * Apply an impulse to an entity
  *
@@ -230,7 +268,9 @@ getEntityType(entityId)
  * @returns {void}
  */
 applyImpulse(eId, xImpulse, yImpulse, zImpulse)
+```
 
+```js
 /**
  * Set the velocity of an entity
  *
@@ -241,7 +281,9 @@ applyImpulse(eId, xImpulse, yImpulse, zImpulse)
  * @returns {void}
  */
 setVelocity(eId, x, y, z)
+```
 
+```js
 /**
  * Set the heading for a server-auth entity.
  *
@@ -250,7 +292,9 @@ setVelocity(eId, x, y, z)
  * @returns {void}
  */
 setEntityHeading(entityId, newHeading)
+```
 
+```js
 /**
  * Apply an effect to a lifeform.
  * Can be an inbuilt effect E.g. "Speed" (speed boost), "Damage" (damage boost).
@@ -266,7 +310,9 @@ setEntityHeading(entityId, newHeading)
  * @returns {void}
  */
 applyEffect(lifeformId, effectName, duration, customEffectInfo)
+```
 
+```js
 /**
  * Get all the effects currently applied to a lifeform.
  *
@@ -274,7 +320,9 @@ applyEffect(lifeformId, effectName, duration, customEffectInfo)
  * @returns {string[]}
  */
 getEffects(lifeformId)
+```
 
+```js
 /**
  * Remove an effect from a lifeform.
  *
@@ -283,7 +331,9 @@ getEffects(lifeformId)
  * @returns {void}
  */
 removeEffect(lifeformId, name)
+```
 
+```js
 /**
  * Attach/detach mesh instances to/from an entity
  * @param {EntityId} eId
@@ -295,7 +345,9 @@ removeEffect(lifeformId, name)
  * @returns {void}
  */
 updateEntityNodeMeshAttachment(eId, node, type, opts, offset, rotation)
+```
 
+```js
 /**
  * Add following entity to player
  * @param {PlayerId} playerId
@@ -304,7 +356,9 @@ updateEntityNodeMeshAttachment(eId, node, type, opts, offset, rotation)
  * @returns {void}
  */
 addFollowingEntityToPlayer(playerId, eId, offset)
+```
 
+```js
 /**
  * Remove following entity from player
  * @param {PlayerId} playerId
@@ -312,7 +366,9 @@ addFollowingEntityToPlayer(playerId, eId, offset)
  * @returns {void}
  */
 removeFollowingEntityFromPlayer(playerId, entityEId)
+```
 
+```js
 /**
  * @param {EntityId} eId
  * @param {ExplosionType} explosionType
@@ -336,7 +392,9 @@ calcExplosionForce(eId, explosionType, knockbackFactor, explosionRadius, explosi
  * @returns {PlayerId[]}
  */
 getPlayerIds()
+```
 
+```js
 /**
  * Whether a player is currently in the game
  *
@@ -344,13 +402,17 @@ getPlayerIds()
  * @returns {boolean}
  */
 playerIsInGame(playerId)
+```
 
+```js
 /**
  * @param {PlayerId} playerId
  * @returns {boolean}
  */
 playerIsLoggedIn(playerId)
+```
 
+```js
 /**
  * Returns the party that the player was in when they joined the game. The returned object contains the playerDbIds, as well
  * as the playerIds if available, of the party leader and members.
@@ -359,13 +421,17 @@ playerIsLoggedIn(playerId)
  * @returns {PNull<{ playerDbIds: PlayerDbId[] }>}
  */
 getPlayerPartyWhenJoined(playerId)
+```
 
+```js
 /**
  * Get the number of players in the room
  * @returns {number}
  */
 getNumPlayers()
+```
 
+```js
 /**
  * Get the co-ordinates of the blocks the player is standing on as a list. For example, if the center of the player is at 0,0,0
  * this function will return [[0, -1, 0], [-1, -1, 0], [0, -1, -1], [-1, -1, -1]]
@@ -376,7 +442,9 @@ getNumPlayers()
  * @returns {number[][]}
  */
 getBlockCoordinatesPlayerStandingOn(playerId)
+```
 
+```js
 /**
  * Get the types of block the player is standing on
  * For example, if a player is standing on 4 dirt blocks, this will return ["Dirt", "Dirt", "Dirt", "Dirt"]
@@ -384,14 +452,18 @@ getBlockCoordinatesPlayerStandingOn(playerId)
  * @returns {any[]}
  */
 getBlockTypesPlayerStandingOn(playerId)
+```
 
+```js
 /**
  * Show the shop tutorial for a player. Will not be shown if they have ever seen the shop tutorial in your game before.
  * @param {PlayerId} playerId
  * @returns {void}
  */
 showShopTutorial(playerId)
+```
 
+```js
 /**
  * Force respawn a player
  * @param {PlayerId} playerId
@@ -399,7 +471,9 @@ showShopTutorial(playerId)
  * @returns {void}
  */
 forceRespawn(playerId, respawnPos)
+```
 
+```js
 /**
  * Gets the player's current killstreak
  *
@@ -407,7 +481,9 @@ forceRespawn(playerId, respawnPos)
  * @returns {number}
  */
 getCurrentKillstreak(playerId)
+```
 
+```js
 /**
  * Clears the player's current killstreak
  *
@@ -415,7 +491,9 @@ getCurrentKillstreak(playerId)
  * @returns {void}
  */
 clearKillstreak(playerId)
+```
 
+```js
 /**
  * Send a message to everyone
  *
@@ -424,7 +502,9 @@ clearKillstreak(playerId)
  * @returns {void}
  */
 broadcastMessage(message, style)
+```
 
+```js
 /**
  * Send a message to a specific player
  *
@@ -434,7 +514,9 @@ broadcastMessage(message, style)
  * @returns {void}
  */
 sendMessage(playerId, message, style)
+```
 
+```js
 /**
  * Send a flying middle message to a specific player
  *
@@ -444,7 +526,9 @@ sendMessage(playerId, message, style)
  * @returns {void}
  */
 sendFlyingMiddleMessage(playerId, message, distanceFromAction)
+```
 
+```js
 /**
  * Modify a client option at runtime and send to the client if it changed
  *
@@ -454,7 +538,9 @@ sendFlyingMiddleMessage(playerId, message, distanceFromAction)
  * @returns {void}
  */
 setClientOption(playerId, option, value)
+```
 
+```js
 /**
  * Returns the current value of a client option
  *
@@ -463,7 +549,9 @@ setClientOption(playerId, option, value)
  * @returns {ClientOptions[PassedOption]}
  */
 getClientOption(playerId, option)
+```
 
+```js
 /**
  * Modify client options at runtime
  *
@@ -472,7 +560,9 @@ getClientOption(playerId, option)
  * @returns {void}
  */
 setClientOptions(playerId, optionsObj)
+```
 
+```js
 /**
  * Sets a client option to its default value. This will be the value stored in your game's defaultClientOptions, otherwise Bloxd's default.
  *
@@ -481,7 +571,9 @@ setClientOptions(playerId, optionsObj)
  * @returns {void}
  */
 setClientOptionToDefault(playerId, option)
+```
 
+```js
 /**
  * Set every player's other-entity setting to a specific value for a particular player.
  * includeNewJoiners=true means that new players joining the game will also have this other player setting applied.
@@ -493,7 +585,9 @@ setClientOptionToDefault(playerId, option)
  * @returns {void}
  */
 setTargetedPlayerSettingForEveryone(targetedPlayerId, settingName, settingValue, includeNewJoiners)
+```
 
+```js
 /**
  * Set a player's other-entity setting for every player in the game.
  * includeNewJoiners=true means that the player will have the setting applied to new joiners.
@@ -505,7 +599,9 @@ setTargetedPlayerSettingForEveryone(targetedPlayerId, settingName, settingValue,
  * @returns {void}
  */
 setEveryoneSettingForPlayer(playerId, settingName, settingValue, includeNewJoiners)
+```
 
+```js
 /**
  * Play particle effect on all clients, or only on some clients if clientPredictedBy is specified
  * @param {TempParticleSystemOpts} opts
@@ -513,14 +609,18 @@ setEveryoneSettingForPlayer(playerId, settingName, settingValue, includeNewJoine
  * @returns {void}
  */
 playParticleEffect(opts, clientPredictedBy)
+```
 
+```js
 /**
  * Given the name of a player, get their id
  * @param {string} playerName
  * @returns {PNull<PlayerId>}
  */
 getPlayerId(playerName)
+```
 
+```js
 /**
  * Given a player, get their permanent identifier that doesn't change when leaving and re-entering
  *
@@ -528,7 +628,9 @@ getPlayerId(playerName)
  * @returns {PlayerDbId}
  */
 getPlayerDbId(playerId)
+```
 
+```js
 /**
  * Returns null if player not in lobby
  *
@@ -536,14 +638,18 @@ getPlayerDbId(playerId)
  * @returns {PNull<PlayerId>}
  */
 getPlayerIdFromDbId(dbId)
+```
 
+```js
 /**
  * @param {PlayerId} playerId
  * @param {string} reason
  * @returns {void}
  */
 kickPlayer(playerId, reason)
+```
 
+```js
 /**
  * @deprecated - prefer using other UI elements
  * (this UI element hasn't been properly thought through in combination with other elements like killfeed, uirequests, etc)
@@ -565,14 +671,18 @@ kickPlayer(playerId, reason)
  * @returns {void}
  */
 sendTopRightHelper(playerId, icon, text, opts)
+```
 
+```js
 /**
  * Whether the player is on a mobile device or a computer.
  * @param {PlayerId} playerId
  * @returns {boolean}
  */
 isMobile(playerId)
+```
 
+```js
 /**
  * Set the direction the player is looking.
  *
@@ -581,7 +691,9 @@ isMobile(playerId)
  * @returns {void}
  */
 setCameraDirection(playerId, direction)
+```
 
+```js
 /**
  * Set a player's opacity
  * A simple helper that calls setTargetedPlayerSettingForEveryone
@@ -591,7 +703,9 @@ setCameraDirection(playerId, direction)
  * @returns {void}
  */
 setPlayerOpacity(playerId, opacity)
+```
 
+```js
 /**
  * Set the level of viewable opacity by one player on another player
  * A simple helper that calls setOtherEntitySetting
@@ -602,7 +716,9 @@ setPlayerOpacity(playerId, opacity)
  * @returns {void}
  */
 setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer, playerIdOfOpacityPlayer, opacity)
+```
 
+```js
 /**
  * Update the progress bar in the bottom right corner.
  * Can be queued.
@@ -613,7 +729,9 @@ setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer, playerIdOfOpacityPla
  * @returns {void}
  */
 progressBarUpdate(playerId, toFraction, toDuration)
+```
 
+```js
 /**
  * Spin player in kart
  * @param {PlayerId} playerId
@@ -622,7 +740,9 @@ progressBarUpdate(playerId, toFraction, toDuration)
  * @returns {void}
  */
 spinKart(playerId, dir, durationInTicks)
+```
 
+```js
 /**
  * Show a message over the shop in the same place that a shop item's onBoughtMessage is shown.
  * Displays for a couple seconds before disappearing
@@ -633,7 +753,9 @@ spinKart(playerId, dir, durationInTicks)
  * @returns {void}
  */
 sendOverShopInfo(playerId, info)
+```
 
+```js
 /**
  * Open the shop UI for a player
  *
@@ -643,7 +765,9 @@ sendOverShopInfo(playerId, info)
  * @returns {void}
  */
 openShop(playerId, toggle, forceCategory)
+```
 
+```js
 /**
  * Change a part of a player's skin
  * @param {PlayerId} playerId
@@ -652,14 +776,18 @@ openShop(playerId, toggle, forceCategory)
  * @returns {void}
  */
 changePlayerIntoSkin(playerId, partType, selected)
+```
 
+```js
 /**
  * Remove gamemode-applied skin from a player
  * @param {PlayerId} playerId
  * @returns {void}
  */
 removeAppliedSkin(playerId)
+```
 
+```js
 /**
  * Scale node of a player's mesh by 3d vector.
  * State from prior calls to this api is lost so if you want to have multiple nodes scaled, pass in all the scales at once.
@@ -669,7 +797,9 @@ removeAppliedSkin(playerId)
  * @returns {void}
  */
 scalePlayerMeshNodes(playerId, nodeScales)
+```
 
+```js
 /**
  * Set the pose of the player
  * @param {PlayerId} playerId
@@ -677,7 +807,9 @@ scalePlayerMeshNodes(playerId, nodeScales)
  * @returns {void}
  */
 setPlayerPose(playerId, pose)
+```
 
+```js
 /**
  * Set physics state of player (vehicle type and tier)
  * @param {PlayerId} playerId
@@ -685,14 +817,18 @@ setPlayerPose(playerId, pose)
  * @returns {void}
  */
 setPlayerPhysicsState(playerId, physicsState)
+```
 
+```js
 /**
  * Get physics state for player
  * @param {PlayerId} playerId
  * @returns {PlayerPhysicsStateData}
  */
 getPlayerPhysicsState(playerId)
+```
 
+```js
 /**
  * Set camera zoom for a player
  * @param {PlayerId} playerId
@@ -700,7 +836,9 @@ getPlayerPhysicsState(playerId)
  * @returns {void}
  */
 setCameraZoom(playerId, zoom)
+```
 
+```js
 /**
  * @param {PlayerId} playerId - hears the sound
  * @param {string} soundName - Can also be a prefix. If so, a random sound with that prefix will be played
@@ -714,7 +852,9 @@ setCameraZoom(playerId, zoom)
  * @returns {void}
  */
 playSound(playerId, soundName, volume, rate, posSettings)
+```
 
+```js
 /**
  * See documentation for api.playSound
  * @param {string} soundName
@@ -729,7 +869,9 @@ playSound(playerId, soundName, volume, rate, posSettings)
  * @returns {void}
  */
 broadcastSound(soundName, volume, rate, posSettings, exceptPlayerId)
+```
 
+```js
 /**
  * See documentation for api.playSound
  * @param {string} soundName
@@ -744,7 +886,9 @@ broadcastSound(soundName, volume, rate, posSettings, exceptPlayerId)
  * @returns {void}
  */
 playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
+```
 
+```js
 /**
  * Get the position of a player's target block and the block adjacent to it (e.g. where a block would be placed)
  *
@@ -759,7 +903,9 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
  * @returns { { position: Pos; normal: Pos; adjacent: Pos } }
  */
 getPlayerTargetInfo(playerId)
+```
 
+```js
 /**
  * Get the position of a player's camera and the direction (both in Euclidean and spherical coordinates) they are attempting to use an item.
  * The camPos has the same limitations described in getPlayerTargetInfo
@@ -768,7 +914,9 @@ getPlayerTargetInfo(playerId)
  * @returns { { camPos: Pos; dir: Pos; angleDir: AngleDir; moveHeading: number } }
  */
 getPlayerFacingInfo(playerId)
+```
 
+```js
 /**
  * Check whether a player is crouching
  *
@@ -776,14 +924,18 @@ getPlayerFacingInfo(playerId)
  * @returns {boolean}
  */
 isPlayerCrouching(playerId)
+```
 
+```js
 /**
  * Get the aura info for a player
  * @param {PlayerId} playerId
  * @returns { { level: number; totalAura: number; auraPerLevel: number } }
  */
 getAuraInfo(playerId)
+```
 
+```js
 /**
  * Sets the total aura for a player. Will not go over max level or under 0
  * @param {PlayerId} playerId
@@ -791,7 +943,9 @@ getAuraInfo(playerId)
  * @returns {void}
  */
 setTotalAura(playerId, totalAura)
+```
 
+```js
 /**
  * Set the aura level for a player - shortcut for setTotalAura(level * auraPerLevel)
  * @param {PlayerId} playerId
@@ -799,7 +953,9 @@ setTotalAura(playerId, totalAura)
  * @returns {void}
  */
 setAuraLevel(playerId, level)
+```
 
+```js
 /**
  * Add (or remove if negative) aura to a player. Will not go over max level or under 0
  * @param {PlayerId} playerId
