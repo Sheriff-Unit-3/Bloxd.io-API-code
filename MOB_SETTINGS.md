@@ -246,6 +246,11 @@ onTamedHealthMultiplier = 4.0
 ownerDbId = null
 
 /**
+ * @type {boolean}
+ */
+isRideable = null
+
+/**
  * @type {number}
  */
 minFollowingRadius = 3
