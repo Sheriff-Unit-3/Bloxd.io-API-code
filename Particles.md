@@ -10,6 +10,8 @@ These are the strings you can give to functions that take a particle effect `tex
 `glint`
 `soul_0`
 `square_particle`
+`heart`
+`z-particle`
 
 Here's the code for an example particle effect:
 
