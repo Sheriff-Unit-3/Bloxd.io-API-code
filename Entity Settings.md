@@ -16,7 +16,9 @@ These API methods allow you to modify entity settings:
  * @returns {void}
  */
 setTargetedPlayerSettingForEveryone(targetedPlayerId, settingName, settingValue, includeNewJoiners)
+```
 
+```js
 /**
  * Set a player's other-entity setting for every player in the game.
  * includeNewJoiners=true means that the player will have the setting applied to new joiners.
@@ -28,7 +30,9 @@ setTargetedPlayerSettingForEveryone(targetedPlayerId, settingName, settingValue,
  * @returns {void}
  */
 setEveryoneSettingForPlayer(playerId, settingName, settingValue, includeNewJoiners)
+```
 
+```js
 /**
  * Set a player's other-entity setting for a specific entity.
  *
@@ -39,7 +43,9 @@ setEveryoneSettingForPlayer(playerId, settingName, settingValue, includeNewJoine
  * @returns {void}
  */
 setOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName, settingValue)
+```
 
+```js
 /**
  * Set many of a player's other-entity settings for a specific entity.
  *
@@ -49,7 +55,9 @@ setOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName, settingVa
  * @returns {void}
  */
 setOtherEntitySettings(relevantPlayerId, targetedEntityId, settingsObject)
+```
 
+```js
 /**
  * Get the value of a player's other-entity setting for a specific entity.
  *
@@ -71,49 +79,65 @@ Here is the full list of available entity settings:
  * @type {number}
  */
 opacity = 1
+```
 
+```js
 /**
  * Whether the entity can attack other entities, ignored if the targeted entity is invincible
  * @type {boolean}
  */
 canAttack = false
+```
 
+```js
 /**
  * Whether the entity can be seen by the relevant player
  * @type {boolean}
  */
 canSee = true
+```
 
+```js
 /**
  * Whether you can see damage amounts when shooting the entity
  * @type {boolean}
  */
 showDamageAmounts = true
+```
 
+```js
 /**
  * The colour of kills in the killfeed. Defaults to blue for themselves and red for everyone else.
  * @type {string}
  */
 killfeedColour = ""
+```
 
+```js
 /**
  * Scaling of mesh nodes, see api.scalePlayerMeshNodes
  * @type {EntityMeshScalingMap}
  */
 meshScaling = {}
+```
 
+```js
 /**
  * The colour of the player in the lobby leaderboard.
  * @type {string}
  */
 colorInLobbyLeaderboard = ""
+```
 
+```js
 /**
  * The values of the leaderboard.
  * @type {LobbyLeaderboardValues}
  */
 lobbyLeaderboardValues = {}
+```
 
+```js
 /**
  * The name tag info of the player:
  * {
@@ -125,13 +149,17 @@ lobbyLeaderboardValues = {}
  * @type {NameTagInfo}
  */
 nameTagInfo = null
+```
 
+```js
 /**
  * Whether the player has a priority name tag
  * @type {boolean}
  */
 hasPriorityNametag = false
+```
 
+```js
 /**
  * The colour of the player's name.
  * @type {string}
