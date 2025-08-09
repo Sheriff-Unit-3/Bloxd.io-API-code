@@ -49,8 +49,9 @@ onClose = (serverIsShuttingDown) => {}
 /**
  * Called when a player joins the lobby
  * @param playerId - The id of the player that joined
+ * @param fromGameReset - Whether this call is from a game reset (used by SessionBasedGame)
  */
-onPlayerJoin = (playerId) => {}
+onPlayerJoin = (playerId, fromGameReset) => {}
 ```
 ### onPlayerLeave
 ```js
@@ -386,8 +387,9 @@ onChestUpdated = (initiatorEId, isMoonstoneChest, x, y, z) => {}
  * @param {BlockName} fromBlock - The old block that was replaced
  * @param {BlockName} toBlock - The new block that was placed
  * @param {string | null} initiatorDbId - The id of the player who updated the block
+ * @param {WorldBlockChangedInfo} extraInfo - Extra info about the block change
  */
-onWorldChangeBlock = (x, y, z, fromBlock, toBlock, initiatorDbId) => {}
+onWorldChangeBlock = (x, y, z, fromBlock, toBlock, initiatorDbId, estraInfo) => {}
 ```
 ### onCreateBloxdMeshEntity
 ```js
