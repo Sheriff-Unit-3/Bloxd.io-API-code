@@ -12,7 +12,9 @@ These API methods allow you to modify mob settings:
  * @returns {MobSettings<TMobType>[TMobSetting]}
  */
 getDefaultMobSetting(mobType, setting)
+```
 
+```js
 /**
  * Set the default value for a mob setting.
  * @param {TMobType} mobType
@@ -21,7 +23,9 @@ getDefaultMobSetting(mobType, setting)
  * @returns {void}
  */
 setDefaultMobSetting(mobType, setting, value)
+```
 
+```js
 /**
  * Get the current value of a mob setting for a specific mob.
  * @param {MobId} mobId
@@ -29,7 +33,9 @@ setDefaultMobSetting(mobType, setting, value)
  * @returns {MobSettings<MobType>[TMobSetting]}
  */
 getMobSetting(mobId, setting)
+```
 
+```js
 /**
  * Set the current value of a mob setting for a specific mob.
  * @param {MobId} mobId
@@ -47,42 +53,58 @@ Here is the full list of available mob settings:
  * @type {"default"}
  */
 variation = "default"
+```
 
+```js
 /**
  * @type {string}
  */
 name = ""
+```
 
+```js
 /**
  * @type {number}
  */
 maxHealth = 75
+```
 
+```js
 /**
  * @type {number}
  */
 initialHealth = 75
+```
 
+```js
 /**
  * @type {string}
  */
 idleSound = "pigOink"
+```
 
+```js
 /**
  * @type {string}
  */
 attackSound = null
+```
 
+```js
 /**
  * @type {string}
  */
 secondaryAttackSound = null
+```
 
+```js
 /**
  * @type {string}
  */
 hurtSound = "pigHurt"
+```
 
+```js
 /**
  * @type { { itemName: string; probabilityOfDrop: number; dropMinAmount: number; dropMaxAmount: number; applyBurstImpulseToDrop?: boolean; }[] }
  */
@@ -94,172 +116,240 @@ onDeathItemDrops = [
         dropMaxAmount: 3,
     },
 ]
+```
 
+```js
 /**
  * @type {string}
  */
 onDeathParticleTexture = "critical_hit"
+```
 
+```js
 /**
  * @type {number}
  */
 onDeathAura = 20
+```
 
+```js
 /**
  * @type {number}
  */
 baseWalkingSpeed = 3.5
+```
 
+```js
 /**
  * @type {number}
  */
-baseRunningSpeed = 4.55
+baseRunningSpeed = 4.55 * 0.85
+```
 
+```js
 /**
  * @type {number}
  */
 walkingSpeedMultiplier = 1
+```
 
+```js
 /**
  * @type {number}
  */
 runningSpeedMultiplier = 1
+```
 
+```js
 /**
  * @type {number}
  */
 jumpCount = 0
+```
 
+```js
 /**
  * @type {number}
  */
 baseJumpImpulseXZ = 0
+```
 
+```js
 /**
  * @type {number}
  */
 baseJumpImpulseY = 0
+```
 
+```js
 /**
  * @type {number}
  */
 jumpMultiplier = 1
+```
 
+```js
 /**
  * @type {number}
  */
 runAwayRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 chaseRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 territoryRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 hostilityRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 stoppingRadius = 0.5
+```
 
+```js
 /**
  * @type {number}
  */
 attackInterval = 0
+```
 
+```js
 /**
  * @type {number}
  */
 attackRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 secondaryAttackRadius = 0
+```
 
+```js
 /**
  * @type {number}
  */
 attackDamage = 0
+```
 
+```js
 /**
  * @type {number}
  */
 secondaryAttackDamage = 0
+```
 
+```js
 /**
  * @type {number}
  */
 attackImpulse = 0
+```
 
+```js
 /**
  * @type {number}
  */
 secondaryAttackImpulse = 0
+```
 
+```js
 /**
  * @type {string}
  */
 heldItemName = null
+```
 
+```js
 /**
  * @type {string}
  */
 attackItemName = null
+```
 
+```js
 /**
  * @type {string}
  */
 secondaryAttackItemName = null
+```
 
+```js
 /**
  * @type {string}
  */
 attackEffectName = null
+```
 
+```js
 /**
  * @type {number}
  */
 attackEffectDuration = 0
+```
 
+```js
 /**
  * @type {Readonly<MobTameInfo>}
  */
 tameInfo = null
+```
 
+```js
 /**
  * @type {number}
  */
 onTamedHealthMultiplier = 4.0
+```
 
+```js
 /**
  * @type {string}
  */
 ownerDbId = null
+```
 
-/**
- * @type {boolean}
- */
-isRideable = null
-
+```js
 /**
  * @type {number}
  */
 minFollowingRadius = 3
+```
 
+```js
 /**
  * @type {number}
  */
 maxFollowingRadius = 12
+```
 
+```js
+/**
+ * @type {boolean}
+ */
+isRideable = false
+```
+
+```js
 /**
  * @type {string}
  */
