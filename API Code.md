@@ -104,13 +104,19 @@ setHealth(entityId, newHealth, whoDidDamage, increaseMaxHealthIfNeeded)
 /**
  * Make it as if hittingEId hit hitEId
  *
- * @param {PlayerId} hittingEId
- * @param {PlayerId} hitEId
+ * @param {LifeformId} hittingEId
+ * @param {LifeformId} hitEId
  * @param {number[]} dirFacing
  * @param {PNull<PlayerBodyPart>} [bodyPartHit]
- * @returns {void}
+ * @param { {
+ *    damage?: PNull<number>
+ *    heldItemName?:PNull<string>
+ *    horizontalKbMultiplier?: number
+ *    verticalKbMultiplier?: number
+ * } } [overrides]
+ * @returns {boolean}
  */
-applyMeleeHit(hittingEId, hitEId, dirFacing, bodyPartHit)
+applyMeleeHit(hittingEId, hitEId, dirFacing, bodyPartHit, overrides)
 ```
 
 ```js
@@ -1113,9 +1119,10 @@ setBlock(x, y, z, blockName)
  * @param {number} y
  * @param {number} z
  * @param {BlockName} blockName
+ * @param {WorldBlockChangeInfo} [extraInfo]
  * @returns {"preventChange" | "preventDrop" | void} - "preventChange" if the change was prevented, "preventDrop" if the change was allowed but without dropping any items, and undefined if the change was allowed with an item drop
  */
-attemptWorldChangeBlock(initiatorDbId, x, y, z, blockName)
+attemptWorldChangeBlock(initiatorDbId, x, y, z, blockName, extraInfo)
 
 /**
  * Returns whether a block is solid or not.
@@ -1358,9 +1365,10 @@ raycastForBlock(fromPos, dirVec)
  * @param {PNull<number>} [amount] - The amount of the item to include in the drop - so when the player picks up the item drop, they get this many of the item.
  * @param {boolean} [mergeItems] - Whether to merge the item into an nearby item of same type, if one exists. Defaults to false.
  * @param {ItemAttributes} [attributes] - Attributes of the item being dropped
+ * @pram {number} [timeTillDespawn] - Time till the item automatically despawns in millisecounds. Max of 5 mins.
  * @returns {PNull<EntityId>} - the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
  */
-createItemDrop(x, y, z, itemName, amount, mergeItems, attributes)
+createItemDrop(x, y, z, itemName, amount, mergeItems, attributes, timeTillDespawn)
 
 /**
  * Prevent a player from picking up an item. itemId returned by createItemDrop
@@ -1393,15 +1401,15 @@ getInitialItemMetadata(itemName)
  * Either based on a client option for a player: (e.g. `DirtTtb`)
  * or its entry in blockMetadata.ts or nonBlockMetadata in itemMetadata.ts if no client option is set.
  *
- * If null is passed for playerId, this is simply its entry in blockMetadata etc.
+ * If null is passed for lifeformId, this is simply its entry in blockMetadata etc.
  *
  *
- * @param {PNull<PlayerId>} playerId
+ * @param {PNull<LifeformId>} LifeformId
  * @param {string} itemName
  * @param {K} stat
  * @returns {AnyMetadataItem[K]}
  */
-getItemStat(playerId, itemName, stat)
+getItemStat(LifeformId, itemName, stat)
 
 /**
  * Give a player an item and a certain amount of that item.
@@ -1637,11 +1645,24 @@ editItemCraftingRecipes(playerId, itemName, recipesForItem)
  * Reset the crafting recipes for a given back to its original bloxd state
  *
  * @param {PlayerId} playerId
- * @param {string} itemName
+ * @param {PNull<string>} itemName - Resets all crafting recipes for the given player if null, otherwise restes the crafting recipes for the given  item.
  * @returns {void}
  */
 resetItemCraftingRecipes(playerId, itemName)
+```
 
+```js
+/**
+ * Removes crafting recipes
+ *
+ * @param {PlayerId} playerId
+ * @param {PNull<string>} itemName - Removes all the crafting recipes for the given player if null, otherwise removes the crafting reipes for the given item.
+ * @returns {void}
+ */
+removeItemCraftingRecipes(playerId, itemName)
+```
+
+```js
 /**
  * Set the amount of an item in an item entity
  *
@@ -1671,13 +1692,17 @@ getLobbyName()
  * @returns {boolean} - boolean
  */
 isPublicLobby()
+```
 
+```js
 /**
  * Returns if the current lobby the game is running in is special - e.g. a discord guild or dm, or simply a standard lobby
  * @returns {LobbyType}
  */
 getLobbyType()
+```
 
+```js
 /**
  * Check if a position is within a cubic rectangle
  *
@@ -1696,9 +1721,13 @@ isInsideRect(coordsToCheck, pos1, pos2, addOneToMax)
 
 ```js
 type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | StyledText)[]
+```
 
+```js
 type EntityMeshScalingMap = { [key in "TorsoNode" | "HeadMesh" | "ArmRightMesh" | "ArmLeftMesh" | "LegLeftMesh" | "LegRightMesh"]?: number[] }
+```
 
+```js
 type EntityName = {
     entityName: string
     style?: {
@@ -1706,30 +1735,40 @@ type EntityName = {
         colour?: string
     }
 }
+```
 
-type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment"
+```js
+type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment"
+```
 
+```js
 enum ParticleSystemBlendMode {
     // Source color is added to the destination color without alpha affecting the result
     OneOne = 0,
-    // Blend current color and particle color using particle’s alpha
+    // Blend current color and particle color using particle's alpha
     Standard = 1,
-    // Add current color and particle color multiplied by particle’s alpha
+    // Add current color and particle color multiplied by particle's alpha
     Add,
     // Multiply current color with particle color
     Multiply,
-    // Multiply current color with particle color then add current color and particle color multiplied by particle’s alpha
+    // Multiply current color with particle color then add current color and particle color multiplied by particle's alpha
     MultiplyAdd,
 }
+```
 
-type RecipesForItem = {
-    requires: { items: string[]; amt: number }[]
-    produces: number
-    station?: string | string[]
-    onCraftedAura?: number
-    isStarterRecipe?: boolean
-}[]
+```js
+type RecipesForItem = RecursiveReadonly<
+    {
+        requires: { items: string[]; amt: number }[]
+        produces: number
+        station?: string | string[]
+        onCraftedAura?: number
+        isStarterRecipe?: boolean
+    }[]
+>
+```
 
+```js
 type StyledIcon = {
     icon: string
     style?: {
@@ -1739,7 +1778,9 @@ type StyledIcon = {
         opacity?: number
     }
 }
+```
 
+```js
 type StyledText = {
     str: string | EntityName | TranslatedText
     style?: {
@@ -1752,7 +1793,9 @@ type StyledText = {
     }
     clickableUrl?: string
 }
+```
 
+```js
 type TempParticleSystemOpts = {
     texture: string
     minLifeTime: number
@@ -1782,18 +1825,29 @@ type TempParticleSystemOpts = {
     manualEmitCount: number
     hideDist?: number
 }
+```
 
+```js
 type TranslatedText = {
     translationKey: string
     params?: Record<string, string | number | boolean | EntityName>
 }
+```
 
+```js
 type ItemAttributes = { customDisplayName?: string; customDescription?: string; customAttributes?: Record<string, any> }
+```
 
+```js
 enum WalkThroughType {
     CANT_WALK_THROUGH = 0,
     CAN_WALK_THROUGH = 1,
     DEFAULT_WALK_THROUGH = 2,
 }
+```
 
+```js
+type WorldBlockChangedInfo = {
+    cause: PNull<"Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion">
+}
 ```
