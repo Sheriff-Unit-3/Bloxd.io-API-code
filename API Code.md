@@ -1906,6 +1906,20 @@ type TranslatedText = {
 ```
 
 ```js
+type EarthSkyBox = {
+    type: "earth"
+    inclination?: number
+    turbidity?: number
+    infiniteDistance?: number
+    luminance?: number
+    yCameraOffset?: number
+    azimuth?: number
+    // Not part of sky model by default; heavily tint to a vertex color
+    vertexTint?: [number, number, number]
+}
+```
+
+```js
 type ItemAttributes = { customDisplayName?: string; customDescription?: string; customAttributes?: Record<string, any> }
 ```
 
