@@ -1123,7 +1123,9 @@ setBlock(x, y, z, blockName)
  * @returns {"preventChange" | "preventDrop" | void} - "preventChange" if the change was prevented, "preventDrop" if the change was allowed but without dropping any items, and undefined if the change was allowed with an item drop
  */
 attemptWorldChangeBlock(initiatorDbId, x, y, z, blockName, extraInfo)
+```
 
+```js
 /**
  * Returns whether a block is solid or not.
  * E.g. Grass block is solid, while water, ladder and water are not.
@@ -1135,7 +1137,9 @@ attemptWorldChangeBlock(initiatorDbId, x, y, z, blockName, extraInfo)
  * @returns {boolean}
  */
 getBlockSolidity(x, y, z)
+```
 
+```js
 /**
  * Helper function that sets all blocks in a rectangle to a specific block.
  *
@@ -1145,7 +1149,9 @@ getBlockSolidity(x, y, z)
  * @returns {void}
  */
 setBlockRect(pos1, pos2, blockName)
+```
 
+```js
 /**
  * Create walls by providing two opposite corners of the cuboid
  *
@@ -1158,7 +1164,9 @@ setBlockRect(pos1, pos2, blockName)
  * @returns {void}
  */
 setBlockWalls(pos1, pos2, blockName, hasFloor, hasCeiling)
+```
 
+```js
 /**
  * Only use this instead of getBlock if you REALLY need the performance (i.e. you are iterating over tens of thousands of blocks)
  * ReturnedObject.blockData is a 32x32x32 ndarray of block ids
@@ -1170,7 +1178,9 @@ setBlockWalls(pos1, pos2, blockName, hasFloor, hasCeiling)
  * @returns {PNull<GameChunk>} - null if the chunk is not loaded in a persisted world. ReturnedObject.blockData is an ndarray that can be accessed
  */
 getChunk(pos)
+```
 
+```js
 /**
  * Use this to get a chunk ndarray you can edit and set in resetChunk.
  *
@@ -1181,7 +1191,9 @@ getChunk(pos)
  * @returns {GameChunk}
  */
 getEmptyChunk()
+```
 
+```js
 /**
  * Splits the block name by '|'. If no meta info, metaInfo is ''
  *
@@ -1189,7 +1201,9 @@ getEmptyChunk()
  * @returns {ItemMetaInfo}
  */
 getMetaInfo(blockName)
+```
 
+```js
 /**
  * Get the numeric id of a block used in the ndarrays returned from getChunk
  * I.e. chunk.blockData.set(x, y, z, api.blockNameToBlockId("Dirt"))
@@ -1200,7 +1214,9 @@ getMetaInfo(blockName)
  * @returns {PNull<number>}
  */
 blockNameToBlockId(blockName, allowInvalidBlock)
+```
 
+```js
 /**
  * Goes from block id to block name. The reverse of blockNameToBlockId
  *
@@ -1208,7 +1224,9 @@ blockNameToBlockId(blockName, allowInvalidBlock)
  * @returns {BlockName}
  */
 blockIdToBlockName(blockId)
+```
 
+```js
 /**
  * Get the unique id of the chunk containing pos in the current map
  *
@@ -1216,7 +1234,9 @@ blockIdToBlockName(blockId)
  * @returns {string}
  */
 blockCoordToChunkId(pos)
+```
 
+```js
 /**
  * Get the co-ordinates of the block in the chunk with the lowest x, y, and z co-ordinates
  *
@@ -1224,7 +1244,9 @@ blockCoordToChunkId(pos)
  * @returns {[number, number, number]}
  */
 chunkIdToBotLeftCoord(chunkId)
+```
 
+```js
 /**
  * Let a player change a block at a specific co-ordinate. Useful when client option canChange is false.
  * Overrides blockRect and blockType settings, so also useful when you have disallowed changing of a block type with setCantChangeBlockType.
@@ -1237,7 +1259,9 @@ chunkIdToBotLeftCoord(chunkId)
  * @returns {void}
  */
 setCanChangeBlock(playerId, x, y, z)
+```
 
+```js
 /**
  * Prevents a player from changing a block at a specific co-ordinate. Useful when client option canChange is true.
  * Overrides blockRect and blockType settings, so also useful when you have allowed changing of a block type with setCantChangeBlockType.
@@ -1250,7 +1274,9 @@ setCanChangeBlock(playerId, x, y, z)
  * @returns {void}
  */
 setCantChangeBlock(playerId, x, y, z)
+```
 
+```js
 /**
  * Lets a player Change a block type. Valid names are those contained within blockMetadata.ts and 'Air'
  * Less priority than cant change block pos/can change block rect
@@ -1260,7 +1286,9 @@ setCantChangeBlock(playerId, x, y, z)
  * @returns {void}
  */
 setCanChangeBlockType(playerId, blockName)
+```
 
+```js
 /**
  * Stops a player from Changeing a block type. Valid names are those contained within blockMetadata.ts and 'Air'
  * Less priority than can change block pos/can change block rect
@@ -1270,7 +1298,9 @@ setCanChangeBlockType(playerId, blockName)
  * @returns {void}
  */
 setCantChangeBlockType(playerId, blockName)
+```
 
+```js
 /**
  * Remove any previous can/cant change block type settings for a player
  *
@@ -1279,7 +1309,9 @@ setCantChangeBlockType(playerId, blockName)
  * @returns {void}
  */
 resetCanChangeBlockType(playerId, blockName)
+```
 
+```js
 /**
  * Make it so a player can Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
  * and [1, 1, 1] is pos2 then the 8 blocks contained within low and high will be able to be broken.
@@ -1292,7 +1324,9 @@ resetCanChangeBlockType(playerId, blockName)
  * @returns {void}
  */
 setCanChangeBlockRect(playerId, pos1, pos2)
+```
 
+```js
 /**
  * Make it so a player cant Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
  * and [1, 1, 1] is pos2 then the 8 blocks contained within pos1 and pos2 won't be able to be broken.
@@ -1305,7 +1339,9 @@ setCanChangeBlockRect(playerId, pos1, pos2)
  * @returns {void}
  */
 setCantChangeBlockRect(playerId, pos1, pos2)
+```
 
+```js
 /**
  * Remove any previous can/cant change block rect settings for a player
  *
@@ -1315,7 +1351,9 @@ setCantChangeBlockRect(playerId, pos1, pos2)
  * @returns {void}
  */
 resetCanChangeBlockRect(playerId, pos1, pos2)
+```
 
+```js
 /**
  * Allow a player to walk through a type of block. For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
  *
@@ -1326,7 +1364,9 @@ resetCanChangeBlockRect(playerId, pos1, pos2)
  * @returns {void}
  */
 setWalkThroughType(playerId, blockName, disable)
+```
 
+```js
 /**
  * Allow a player to walk through (or not walk through) voxels that are located within a given rectangle.
  * For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
@@ -1340,7 +1380,9 @@ setWalkThroughType(playerId, blockName, disable)
  * @returns {void}
  */
 setWalkThroughRect(playerId, pos1, pos2, updateType)
+```
 
+```js
 /**
  * Raycast for a block in the world.
  * Given a position and a direction, find the first block that the "ray" hits.
@@ -1350,6 +1392,35 @@ setWalkThroughRect(playerId, pos1, pos2, updateType)
  * @returns {BlockRaycastResult}
  */
 raycastForBlock(fromPos, dirVec)
+```
+
+```js
+/**
+ * Store data about a block in a performant manner. Data is cleared when block changes.
+ * E.g. chest
+ * Works well with blocks marked tickable (e.g. wheat)
+ *
+ * @param {number} x
+ * @param {number} y
+ * @param {number} z
+ * @param {unknown} data
+ * @returns {void}
+ */
+setBlockData(x, y, z, data)
+```
+
+```js
+/**
+ * Get stored data about a block in a performant manner. Data is cleared when block changes.
+ * E.g. chest
+ * Works well with blocks marked tickable (e.g. wheat)
+ *
+ * @param {number} x
+ * @param {number} y
+ * @param {number} z
+ * @returns {any}
+ */
+getBlockData(x, y, z)
 ```
 
 ### Item/Inventory Functions
@@ -1738,7 +1809,7 @@ type EntityName = {
 ```
 
 ```js
-type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment"
+type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment" | "Health" | "HealthShield"
 ```
 
 ```js
