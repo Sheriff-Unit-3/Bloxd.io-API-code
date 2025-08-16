@@ -70,6 +70,8 @@ getOtherEntitySetting(relevantPlayerId, targetedEntityId, settingName)
 ```
 
 Here is the full list of available entity settings:
+> [!TIP]
+> If you are having issues with Bloxd.io not reconizing these settings, then try placing them in quotes `''`. Example: ``` api.setEveryoneSettingForPlayer(myId, 'canAttack', false, true)```. Sometimes you may also need to do the same for the answer if it's not a `boolean` value.
 
 ```js
 /**
