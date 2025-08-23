@@ -213,8 +213,9 @@ onPlayerCraft = (playerId, itemName, craftingIdx, recipe) => {}
  * @param {number} y - The y coordinate of the chest that the player is attempting to open
  * @param {number} z - The z coordinate of the chest that the player is attempting to open
  * @param {boolean} isMoonstoneChest - Whether the chest is a moonstone chest
+ * @param {boolean} isIronChest - Whether the chest is an iron chest
  */
-onPlayerAttemptOpenChest = (playerId, x, y, z, isMoonstoneChest) => {}
+onPlayerAttemptOpenChest = (playerId, x, y, z, isMoonstoneChest, isIronChest) => {}
 ```
 ### onPlayerOpenedChest
 ```js
@@ -225,8 +226,9 @@ onPlayerAttemptOpenChest = (playerId, x, y, z, isMoonstoneChest) => {}
  * @param {number} y - The y coordinate of the chest that was opened
  * @param {number} z - The z coordinate of the chest that was opened
  * @param {boolean} isMoonstoneChest - Whether the chest is a moonstone chest
+ * @param {boolean} isIronChest - Whether the chest is an iron chest
  */
-onPlayerOpenedChest = (playerId, x, y, z, isMoonstoneChest) => {}
+onPlayerOpenedChest = (playerId, x, y, z, isMoonstoneChest, isIronChest) => {}
 ```
 ### onPlayerMoveItemOutOfInventory
 ```js
