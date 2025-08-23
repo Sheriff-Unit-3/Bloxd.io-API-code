@@ -440,6 +440,26 @@ getNumPlayers()
 
 ```js
 /**
+ * Update the max players and soft max players matchmaking will use
+ *
+ * softMaxPlayers is the number of players that matchmaking will route to using "Quick Play".
+ * Once the softMaxPlayers limit is reached, this lobby can only be joined by requesting the lobby name or joining a friend.
+ *
+ * maxPlayers is the absolute maximum: a lobby will not have more players than this.
+ * Tip: softMaxPlayers should be around 90% of maxPlayers
+ *
+ * WARNING: This change is not immediate, as it takes a while for matchmaking to find out.
+ * Also, this will not kick players out of the lobby if set to a lower value than the current player count.
+ *
+ * @param {number} softMaxPlayers
+ * @param {number} maxPlayers
+ * @returns {void}
+ */
+setMaxPlayers(softMaxPlayers, maxPlayers)
+```
+
+```js
+/**
  * Get the co-ordinates of the blocks the player is standing on as a list. For example, if the center of the player is at 0,0,0
  * this function will return [[0, -1, 0], [-1, -1, 0], [0, -1, -1], [-1, -1, -1]]
  * If the player is just standing on one block, the function would return e.g. [[0, 0, 0]]
@@ -1809,7 +1829,7 @@ type EntityName = {
 ```
 
 ```js
-type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment" | "Health" | "HealthShield"
+type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Thief" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment" | "Health" | "HealthShield"
 ```
 
 ```js
