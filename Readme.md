@@ -8,9 +8,9 @@
 > [!TIP]
 > Find information that you think should be added or changed? Create a pull request!
 
-You can run javascript when right clicking code blocks and press to code boards.
+You can run JavaScript when right clicking code blocks and press to code boards.
 This is only available to owners of worlds lobbies.
-The javascript can interact with the Bloxd.io game api.
+The JavaScript can interact with the Bloxd.io game api.
 
 Please use [Bloxd.io's official discord server](https://discord.gg/vwMp5y25RX) to report any issues you come across or features you'd like to see added.
 Please create a pull request if you notice incorrect, or missing information in this version of the documenation.
@@ -42,6 +42,8 @@ Please create a pull request if you notice incorrect, or missing information in 
 - You can use `api.log` or `console.log` for printing and debugging (they do the same thing).
 - You can use `Date.now()` instead of `api.now()` if you prefer, both return the time in milliseconds.
 - Comments like `/* comment */` and `// comment` work.
+- World Code and Code Blocks are limited to 16,000 charecters including spaces and returns. The code editor is 80 charecters wide.
+- The JavaScript `var` variable can be called from World Code, Code Blocks, and Boards, regardless of which ones it is defined in. (Note though that if it is placed in a Code Block or Board that it must be executed before the variable can be used.)
 
 > [!NOTE]
 > The official documentation will say that `// comments` will not work, but that is incorrect as they now work.
