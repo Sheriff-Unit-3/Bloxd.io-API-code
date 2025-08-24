@@ -1956,3 +1956,27 @@ type WorldBlockChangedInfo = {
     cause: PNull<"Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion">
 }
 ```
+
+## Enchants
+> [!NOTE]
+> Thank you to the_ccccc for sharing this!
+
+```js
+enchants = ['protection', 'health', 'health regen', 'damage', 'critical damage', 'attack speed', 'momentum', 'break speed', 'yield', 'aura', 'stomp', 'protection', 'knockback', 'arrow speed', 'arrow damage', 'quick charge', 'knockback resist', 'horizontal knockback', 'vertical knockback']
+```
+
+```js
+item_enchants = {
+    "armor": ['protection', 'health', 'health regen'],
+    "sword": ['damage', 'critical damage', 'attack speed'],
+    "pickaxe": ['momentum', 'break speed', 'yield', 'aura'],
+    "hoe": ['momentum', 'break speed', 'yield', 'aura'],
+    "axe": ['momentum', 'break speed', 'aura'],
+    "spade": ['momentum', 'break speed', 'aura'],
+    "fur boots": ['stomp', 'protection', 'health', 'health regen'],
+    "knight sword": ['damage', 'critical damage', 'attack speed', 'knockback'],
+    "moonstone pickaxe": ['momentum', 'break speed', 'aura'],
+    "bow": ['arrow speed', 'arrow damage', 'quick charge'],
+    "fur chestplate": ['knockback resist', 'protection', 'health', 'health regen'],
+    "stick": ['horizontal knockback', 'vertical knockback', 'damage']
+```
