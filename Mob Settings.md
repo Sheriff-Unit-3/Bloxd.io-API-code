@@ -1,6 +1,8 @@
 # Mob Settings
 
 These impact the behaviour of mobs, what they look like, and how they sound. These can either be set on a per-mob basis or the default can be set for all mobs of a particular type.
+
+## API Methods to Get/Set Mob Settings
 These API methods allow you to modify mob settings:
 
 ```js
@@ -46,6 +48,7 @@ getMobSetting(mobId, setting)
 setMobSetting(mobId, setting, value)
 ```
 
+### Settings and Values for them
 Here is the full list of available mob settings:
 
 ```js
@@ -354,4 +357,46 @@ isRideable = false
  * @type {string}
  */
 metaInfo = ""
+```
+
+## Mob Types and Variations
+
+```json
+{
+  "Sheep": ["default"],
+  "Stag": ["default"],
+  "Wildcat": [
+    "default",
+    "tabby",
+    "grey",
+    "black",
+    "calico",
+    "siamese",
+    "leopard"
+  ],
+  "Wolf": [
+    "default",
+    "white",
+    "brown",
+    "grey",
+    "spectral"
+  ],
+  "Bear": ["default"],
+  "Cave Golem": ["default", "iron"],
+  "Cow": ["default", "cream"],
+  "Deer": ["default"],
+  "Draugr Huntress": ["default", "chainmail"],
+  "Draugr Knight": ["default"],
+  "Draugr Skeleton": ["default"],
+  "Draugr Zombie": ["default", "longHairChestplate", "longHairClothed", "shortHairClothed"],
+  "Frost Golem": ["default"],
+  "Frost Skeleton": ["default"],
+  "Frost Zombie": ["default", "longHairChestplate", "shortHairClothed"],
+  "Gold Watermelon Stag": ["default"],
+  "Gorilla": ["default"],
+  "Horse": ["default", "black", "brown", "cream"],
+  "Iron Golem": ["default"],
+  "Magma Golem": ["default"],
+  "Pig": ["default"]
+}
 ```
