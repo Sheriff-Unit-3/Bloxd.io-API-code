@@ -1962,21 +1962,21 @@ type WorldBlockChangedInfo = {
 > Thank you to the_ccccc for sharing this!
 
 ```js
-enchants = ['protection', 'health', 'health regen', 'damage', 'critical damage', 'attack speed', 'momentum', 'break speed', 'yield', 'aura', 'stomp', 'protection', 'knockback', 'arrow speed', 'arrow damage', 'quick charge', 'knockback resist', 'horizontal knockback', 'vertical knockback']
+enchants = ['Protection', 'Health', 'Health Regen', 'Damage', 'Critical Damage', 'Attack Speed', 'Momentum', 'Break Speed', 'Yield', 'Aura', 'Stomp', 'Protection', 'Knockback', 'Arrow Speed', 'Arrow Damage', 'Quick Charge', 'Knockback Resist', 'Horizontal Knockback', 'Vertical Knockback']
 ```
 
 ```js
 item_enchants = {
-    "armor": ['protection', 'health', 'health regen'],
-    "sword": ['damage', 'critical damage', 'attack speed'],
-    "pickaxe": ['momentum', 'break speed', 'yield', 'aura'],
-    "hoe": ['momentum', 'break speed', 'yield', 'aura'],
-    "axe": ['momentum', 'break speed', 'aura'],
-    "spade": ['momentum', 'break speed', 'aura'],
-    "fur boots": ['stomp', 'protection', 'health', 'health regen'],
-    "knight sword": ['damage', 'critical damage', 'attack speed', 'knockback'],
-    "moonstone pickaxe": ['momentum', 'break speed', 'aura'],
-    "bow": ['arrow speed', 'arrow damage', 'quick charge'],
-    "fur chestplate": ['knockback resist', 'protection', 'health', 'health regen'],
-    "stick": ['horizontal knockback', 'vertical knockback', 'damage']
+    "armor": ['Protection', 'Health', 'Health Regen'],
+    "sword": ['Damage', 'Critical Damage', 'Attack Speed'],
+    "pickaxe": ['Momentum', 'Break speed', 'Yield', 'Aura'],
+    "hoe": ['Momentum', 'Break Speed', 'Yield', 'Aura'],
+    "axe": ['Momentum', 'Break Speed', 'Aura'],
+    "spade": ['Momentum', 'Break Speed', 'Aura'],
+    "fur boots": ['Stomp', 'Protection', 'Health', 'Health Regen'],
+    "knight sword": ['Damage', 'Critical Damage', 'Attack Speed', 'Knockback'],
+    "moonstone pickaxe": ['Momentum', 'Break Speed', 'Aura'],
+    "bow": ['Arrow Speed', 'Arrow Damage', 'Quick Charge'],
+    "fur chestplate": ['Knockback Resist', 'Protection', 'Health', 'Health Regen'],
+    "stick": ['Horizontal Knockback', 'Vertical Knockback', 'Damage']
 ```
