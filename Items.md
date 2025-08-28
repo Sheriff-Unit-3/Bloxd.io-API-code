@@ -803,9 +803,7 @@ Purple Paintball Explosive Item
 Pink Paintball Explosive Item  
 Orange Paintball Explosive Item  
 Magenta Paintball Explosive Item  
-Lime Paintball Explosive Item  
-Light Gray Paintball Explosive Item  
-Light Blue Paintball Explosive Item  
+Lime Paintball Explosive Item   
 Green Paintball Explosive Item  
 Gray Paintball Explosive Item  
 Cyan Paintball Explosive Item  
@@ -1001,4 +999,5 @@ Aura XP Potion II
 Splash Aura XP Potion  
 Splash Aura XP Potion II  
 Arrow of Aura XP  
+
 ```
