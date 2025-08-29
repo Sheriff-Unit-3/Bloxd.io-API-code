@@ -18,6 +18,7 @@ api.changePlayerIntoSkin(myId, 'body', ''Wizard')
 # Poses
 `standing`  
 `sitting`  
+`sleeping`  
 `gliding`  
 `driving`  
 `zombie`  
