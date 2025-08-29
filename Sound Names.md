@@ -68,6 +68,21 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
 `fallsmall`
 `pickUp`
 `levelup`
+`successfulBowHit`
+`sweep6`
+`trapdoorOpen`
+
+### Firecracker
+`firecracker1`
+`firecracker2`
+`firecracker3`
+`firecracker4`
+
+### Game Sounds
+`game_start_countdown_01`
+`game_start_countdow
+_02` `game_start_countdown_03`
+`game_start_countdown_final`
 
 ### Bucket sounds
 
@@ -263,26 +278,34 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
 `submachine_tail_only_shot_01`
 
 ### Mob Sounds
-#### CaveGolem
+#### Golem
+`golemGrunt1`
+`golemGrunt2`
 
+##### CaveGolem
 `caveGolem1`
 `caveGolem2`
 `caveGolem3`
 `caveGolem4`
 
 #### Cow
-
 `cowMoo1`
 `cowMoo2`
 `cowMoo3`
+`cowHurt1`
 
 #### Pig
-
+##### Oink
 `pigOink1`
 `pigOink2`
 `pigOink3`
 `pigOink4`
 `pigOink5`
+
+##### Hurt
+`pigHurt1`
+`pigHurt2`
+`pigHurt3`
 
 #### Sheep
 
@@ -290,6 +313,70 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
 `sheepBaa2`
 `sheepBaa3`
 `sheepBaa4`
+`sheepHurt1`
+
+#### Dear
+`deerGrunt1`
+`deerHurt1`
+
+#### Stag
+`stagGrunt1`
+`stagHurt1`
+
+#### Bear
+`bearRoar1`
+`bearRoar2`
+`bearRoar3`
+`bearRoar4`
+`bearRoar5`
+
+#### Gorilla
+`gorillaIdle1`
+`gorillaIdle2`
+`gorillaIdle3`
+`gorillaIdle4`
+`gorillaRoar1`
+
+#### Dog
+##### Bark
+`dogBark1`
+`dogBark2`
+`dogBark3`
+
+##### Growl
+`dogGrowl1`
+`dogGrowl2`
+`dogGrowl3`
+
+##### Hurt
+`dogHurt1`
+`dogHurt2`
+
+#### Cat
+##### Hiss
+`catHiss1`
+`catHiss2`
+`catHiss3`
+`catHiss4`
+
+##### Hurt
+`catHurt1`
+`catHurt2`
+`catHurt3`
+
+##### Meow
+`catMeow1`
+`catMeow2`
+`catMeow3`
+`catMeow4`
+`catMeow5`
+
+#### Horse
+`horseHurt1`
+`horseHurt2`
+`horseIdle1`
+`horseIdle2`
+`horseIdle3`
 
 #### Zombie
 ##### Grunt
@@ -304,6 +391,17 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
 `ZombieHurt2`
 `ZombieHurt3`
 `ZombieHurt4`
+
+#### Knight
+`knightGrunt1`
+`knightGrunt2`
+`knightGrunt3`
+
+#### Skeletion
+`skeletonRattle1`
+`skeletonRattle2`
+`skeletonRattle3`
+`skeletonRattle4`
 
 ### Door Sounds
 
@@ -427,11 +525,6 @@ playClientPredictedSound(soundName, volume, rate, posSettings, predictedBy)
 `stone2`
 `stone3`
 `stone4`
-
-
-`successfulBowHit`
-`sweep6`
-`trapdoorOpen`
 
 ### Wood
 
