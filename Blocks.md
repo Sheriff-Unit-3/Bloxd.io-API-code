@@ -1,6 +1,7 @@
 # Blocks
 > [!NOTE]
 > Due to the size of this list it was not proof read when created, therfore there maybe errors/missing data
+> If you need a list without errors, pls go to [ListOfBlocks.md](./ListOfBlocks.md), which includes a machine-generated list of block names, but is not organized.
 
 ## Unloaded
 ```
