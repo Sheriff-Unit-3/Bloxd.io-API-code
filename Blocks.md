@@ -1,6 +1,6 @@
 # Blocks
 > [!NOTE]
-> Due to the size of this list it was not proof read when created, therfore there maybe errors/missing data
+> Thank you to DULPH for proof reading and updating this list!
 
 ## Unloaded
 ```
@@ -16,13 +16,12 @@ Dirt|GrassRoots
 Tilled Soil
 ```
 ### Slabs
-```
 Dirt Slab
-Dirt Slab|rot1|top
-Dirt Slab|rot1|side
-Dirt Slab|rot2|side
-Dirt Slab|rot3|side
-Dirt Slab|rot4|side
+Dirt Slab|meta|rot1|top
+Dirt Slab|meta|rot1|side
+Dirt Slab|meta|rot2|side
+Dirt Slab|meta|rot3|side
+Dirt Slab|meta|rot4|side
 ```
 ### Grass
 ```
@@ -31,8 +30,9 @@ Grass
 Tall Grass
 Tall Grass|Top
 Spectral Grass
+Autumn Fern
 ```
-#### Jungle Grass
+### Jungle Grass
 ```
 Jungle Grass Block
 Jungle Tall Grass
@@ -59,11 +59,11 @@ Pine Grass Slab|meta|rot4|side
 #### Slabs
 ```
 Grass Slab
-Grass Slab|rot1|top
-Grass Slab|rot1|side
-Grass Slab|rot2|side
-Grass Slab|rot3|side
-Grass Slab|rot4|side
+Grass Slab|meta|rot1|top
+Grass Slab|meta|rot1|side
+Grass Slab|meta|rot2|side
+Grass Slab|meta|rot3|side
+Grass Slab|meta|rot4|side
 ```
 ### Snow
 ```
@@ -79,7 +79,7 @@ Snowy Stone Slab|meta|rot2|side
 Snowy Stone Slab|meta|rot3|side
 Snowy Stone Slab|meta|rot4|side
 ```
-##### Messy
+#### Messy
 ```
 Snowy Messy Stone
 ```
@@ -96,18 +96,17 @@ Melting Ice|Breaking
 ```
 Ice Bricks
 Ice Bricks Slab
-Ice Bricks Slab|rot1|top
-Ice Bricks Slab|rot1|side
-Ice Bricks Slab|rot2|side
-Ice Bricks Slab|rot3|side
-Ice Bricks Slab|rot4|side
+Ice Bricks Slab|meta|rot1|top
+Ice Bricks Slab|meta|rot1|side
+Ice Bricks Slab|meta|rot2|side
+Ice Bricks Slab|meta|rot3|side
+Ice Bricks Slab|meta|rot4|side
 ```
 ### Sand
 ```
 Sand
 ```
 #### Sandstone
-```
 Sandstone
 Marked Sandstone
 Smooth Sandstone
@@ -116,38 +115,38 @@ Engraved Sandstone
 ##### Slabs
 ```
 Sandstone Slab
-Sandstone Slab|rot1|top
-Sandstone Slab|rot1|side
-Sandstone Slab|rot2|side
-Sandstone Slab|rot3|side
-Sandstone Slab|rot4|side
+Sandstone Slab|meta|rot1|top
+Sandstone Slab|meta|rot1|side
+Sandstone Slab|meta|rot2|side
+Sandstone Slab|meta|rot3|side
+Sandstone Slab|meta|rot4|side
 ```
 ###### Marked
 ```
 Marked Sandstone Slab
-Marked Sandstone Slab|rot1|top
-Marked Sandstone Slab|rot1|side
-Marked Sandstone Slab|rot2|side
-Marked Sandstone Slab|rot3|side
-Marked Sandstone Slab|rot4|side
+Marked Sandstone Slab|meta|rot1|top
+Marked Sandstone Slab|meta|rot1|side
+Marked Sandstone Slab|meta|rot2|side
+Marked Sandstone Slab|meta|rot3|side
+Marked Sandstone Slab|meta|rot4|side
 ```
 ###### Smooth
 ```
 Smooth Sandstone Slab
-Smooth Sandstone Slab|rot1|top
-Smooth Sandstone Slab|rot1|side
-Smooth Sandstone Slab|rot2|side
-Smooth Sandstone Slab|rot3|side
-Smooth Sandstone Slab|rot4|side
+Smooth Sandstone Slab|meta|rot1|top
+Smooth Sandstone Slab|meta|rot1|side
+Smooth Sandstone Slab|meta|rot2|side
+Smooth Sandstone Slab|meta|rot3|side
+Smooth Sandstone Slab|meta|rot4|side
 ```
 ###### Engraved
 ```
 Engraved Sandstone Slab
-Engraved Sandstone Slab|rot1|top
-Engraved Sandstone Slab|rot1|side
-Engraved Sandstone Slab|rot2|side
-Engraved Sandstone Slab|rot3|side
-Engraved Sandstone Slab|rot4|side
+Engraved Sandstone Slab|meta|rot1|top
+Engraved Sandstone Slab|meta|rot1|side
+Engraved Sandstone Slab|meta|rot2|side
+Engraved Sandstone Slab|meta|rot3|side
+Engraved Sandstone Slab|meta|rot4|side
 ```
 ##### Bricks
 ```
@@ -156,11 +155,11 @@ Sandstone Bricks
 ###### Slabs
 ```
 Sandstone Bricks Slab
-Sandstone Bricks Slab|rot1|top
-Sandstone Bricks Slab|rot1|side
-Sandstone Bricks Slab|rot2|side
-Sandstone Bricks Slab|rot3|side
-Sandstone Bricks Slab|rot4|side
+Sandstone Bricks Slab|meta|rot1|top
+Sandstone Bricks Slab|meta|rot1|side
+Sandstone Bricks Slab|meta|rot2|side
+Sandstone Bricks Slab|meta|rot3|side
+Sandstone Bricks Slab|meta|rot4|side
 ```
 #### Red
 ```
@@ -176,38 +175,38 @@ Marked Red Sandstone
 ##### Slabs
 ```
 Red Sandstone Slab
-Red Sandstone Slab|rot1|top
-Red Sandstone Slab|rot1|side
-Red Sandstone Slab|rot2|side
-Red Sandstone Slab|rot3|side
-Red Sandstone Slab|rot4|side
+Red Sandstone Slab|meta|rot1|top
+Red Sandstone Slab|meta|rot1|side
+Red Sandstone Slab|meta|rot2|side
+Red Sandstone Slab|meta|rot3|side
+Red Sandstone Slab|meta|rot4|side
 ```
 ###### Smooth
 ```
 Smooth Red Sandstone Slab
-Smooth Red Sandstone Slab|rot1|top
-Smooth Red Sandstone Slab|rot1|side
-Smooth Red Sandstone Slab|rot2|side
-Smooth Red Sandstone Slab|rot3|side
-Smooth Red Sandstone Slab|rot4|side
+Smooth Red Sandstone Slab|meta|rot1|top
+Smooth Red Sandstone Slab|meta|rot1|side
+Smooth Red Sandstone Slab|meta|rot2|side
+Smooth Red Sandstone Slab|meta|rot3|side
+Smooth Red Sandstone Slab|meta|rot4|side
 ```
-###### Engraved
+##### Engraved
 ```
 Engraved Red Sandstone Slab
-Engraved Red Sandstone Slab|rot1|top
-Engraved Red Sandstone Slab|rot1|side
-Engraved Red Sandstone Slab|rot2|side
-Engraved Red Sandstone Slab|rot3|side
-Engraved Red Sandstone Slab|rot4|side
+Engraved Red Sandstone Slab|meta|rot1|top
+Engraved Red Sandstone Slab|meta|rot1|side
+Engraved Red Sandstone Slab|meta|rot2|side
+Engraved Red Sandstone Slab|meta|rot3|side
+Engraved Red Sandstone Slab|meta|rot4|side
 ```
-###### Marked
+##### Marked
 ```
 Marked Red Sandstone Slab
-Marked Red Sandstone Slab|rot1|top
-Marked Red Sandstone Slab|rot1|side
-Marked Red Sandstone Slab|rot2|side
-Marked Red Sandstone Slab|rot3|side
-Marked Red Sandstone Slab|rot4|side
+Marked Red Sandstone Slab|meta|rot1|top
+Marked Red Sandstone Slab|meta|rot1|side
+Marked Red Sandstone Slab|meta|rot2|side
+Marked Red Sandstone Slab|meta|rot3|side
+Marked Red Sandstone Slab|meta|rot4|side
 ```
 ##### Bricks
 ```
@@ -216,11 +215,11 @@ Red Sandstone Bricks
 ###### Slabs
 ```
 Red Sandstone Bricks Slab
-Red Sandstone Bricks Slab|rot1|top
-Red Sandstone Bricks Slab|rot1|side
-Red Sandstone Bricks Slab|rot2|side
-Red Sandstone Bricks Slab|rot3|side
-Red Sandstone Bricks Slab|rot4|side
+Red Sandstone Bricks Slab|meta|rot1|top
+Red Sandstone Bricks Slab|meta|rot1|side
+Red Sandstone Bricks Slab|meta|rot2|side
+Red Sandstone Bricks Slab|meta|rot3|side
+Red Sandstone Bricks Slab|meta|rot4|side
 ```
 #### Clay & Gravel
 ```
@@ -230,39 +229,37 @@ Gravel
 ## Plants and Crops
 ### Flowers
 ```
-Dandelion  
-Poppy  
-Red Tulip  
-Pink Tulip  
-White Tulip  
-Orange Tulip  
-Daisy  
-Bluebell  
-Forget-me-not  
-Azure Bluet  
-Lily of the Valley  
-Shadow Rose  
+Dandelion
+Poppy
+Red Tulip
+Pink Tulip
+White Tulip
+Orange Tulip
+Daisy
+Bluebell
+Forget-me-not
+Azure Bluet
+Lily of the Valley
+Shadow Rose
 ```
 #### Roots
 ```
-Dandelion|Roots  
-Poppy|Roots  
-Red Tulip|Roots  
-Pink Tulip|Roots  
-White Tulip|Roots  
-Orange Tulip|Roots  
-Daisy|Roots  
-Bluebell|Roots  
-Forget-me-not|Roots  
-Allium|Roots  
-Azure Bluet|Roots  
-Lily of the Valley|Roots  
+Dandelion|Roots
+Poppy|Roots
+Red Tulip|Roots
+Pink Tulip|Roots
+White Tulip|Roots
+Orange Tulip|Roots
+Daisy|Roots
+Bluebell|Roots
+Forget-me-not|Roots
+Allium|Roots
+Azure Bluet|Roots
+Lily of the Valley|Roots
 Shadow Rose|Roots
-
 ```
-### Crops
+### Crops 
 ```
-Garlic  
 Catnip
 ```
 #### Wheat
@@ -390,7 +387,7 @@ Plum Block
 Corn Block
 Bread Block
 ```
-### Mushrooms
+#### Mushrooms
 ```
 Red Mushroom
 Brown Mushroom
@@ -402,7 +399,7 @@ Mushroom Stem
 ```
 ## Wood & Tree Blocks
 > [!Note]
-> This also includes some blocks that you can craft with Wood.
+> This also includes some blocks you can craft with Wood.
 ### Logs
 #### Regular Logs
 ```
@@ -434,7 +431,7 @@ Barkless Spectral Log
 ```
 #### TreeBase Logs
 ```
-Maple Log|Treebase|Maple
+Maple Log|TreeBase|Maple
 Pine Log|TreeBase|Pine
 Plum Log|TreeBase|Plum
 Cedar Log|TreeBase|Cedar
@@ -507,6 +504,7 @@ Pear Leaves
 Cherry Leaves
 Mango Leaves
 Spectral Leaves
+Autumn Aspen Leaves
 ```
 #### Tree Canopy Leaves
 ```
@@ -527,11 +525,11 @@ Spectral Leaves|TreeCanopy
 ##### Maple
 ```
 Fallen Maple Leaves
-Fallen Maple Leaves|rot1|top
-Fallen Maple Leaves|rot1|side
-Fallen Maple Leaves|rot2|side
-Fallen Maple Leaves|rot3|side
-Fallen Maple Leaves|rot4|side
+Fallen Maple Leaves|meta|rot1|top
+Fallen Maple Leaves|meta|rot1|side
+Fallen Maple Leaves|meta|rot2|side
+Fallen Maple Leaves|meta|rot3|side
+Fallen Maple Leaves|meta|rot4|side
 ```
 ##### Cherry
 ```
@@ -547,7 +545,6 @@ Fallen Cherry Leaves|meta|rot4|side
 Autumn Maple Leaves
 Autumn Maple Leaves|TreeCanopy
 ```
-
 ### Saplings
 ```
 Aspen Sapling
@@ -563,77 +560,76 @@ Mango Sapling
 Spectral Sapling
 ```
 ### Slabs
-
 #### Maple Slabs
 ```
-Maple Slab|rot1|top
-Maple Slab|rot1|side
-Maple Slab|rot2|side
-Maple Slab|rot3|side
-Maple Slab|rot4|side
+Maple Slab|meta|rot1|top
+Maple Slab|meta|rot1|side
+Maple Slab|meta|rot2|side
+Maple Slab|meta|rot3|side
+Maple Slab|meta|rot4|side
 ```
 #### Pine Slabs
 ```
 Pine Slab
-Pine Slab|rot1|top
-Pine Slab|rot1|side
-Pine Slab|rot2|side
-Pine Slab|rot3|side
-Pine Slab|rot4|side
+Pine Slab|meta|rot1|top
+Pine Slab|meta|rot1|side
+Pine Slab|meta|rot2|side
+Pine Slab|meta|rot3|side
+Pine Slab|meta|rot4|side
 ```
 #### Plum Slabs
 ```
 Plum Slab
-Plum Slab|rot1|top
-Plum Slab|rot1|side
-Plum Slab|rot2|side
-Plum Slab|rot3|side
-Plum Slab|rot4|side
+Plum Slab|meta|rot1|top
+Plum Slab|meta|rot1|side
+Plum Slab|meta|rot2|side
+Plum Slab|meta|rot3|side
+Plum Slab|meta|rot4|side
 ```
 #### Cedar Slabs
 ```
 Cedar Slab
-Cedar Slab|rot1|top
-Cedar Slab|rot1|side
-Cedar Slab|rot2|side
-Cedar Slab|rot3|side
-Cedar Slab|rot4|side
+Cedar Slab|meta|rot1|top
+Cedar Slab|meta|rot1|side
+Cedar Slab|meta|rot2|side
+Cedar Slab|meta|rot3|side
+Cedar Slab|meta|rot4|side
 ```
 #### Aspen Slabs
 ```
 Aspen Slab
-Aspen Slab|rot1|top
-Aspen Slab|rot1|side
-Aspen Slab|rot2|side
-Aspen Slab|rot3|side
-Aspen Slab|rot4|side
+Aspen Slab|meta|rot1|top
+Aspen Slab|meta|rot1|side
+Aspen Slab|meta|rot2|side
+Aspen Slab|meta|rot3|side
+Aspen Slab|meta|rot4|side
 ```
 #### Jungle Slabs
 ```
 Jungle Slab
-Jungle Slab|rot1|top
-Jungle Slab|rot1|side
-Jungle Slab|rot2|side
-Jungle Slab|rot3|side
-Jungle Slab|rot4|side
+Jungle Slab|meta|rot1|top
+Jungle Slab|meta|rot1|side
+Jungle Slab|meta|rot2|side
+Jungle Slab|meta|rot3|side
+Jungle Slab|meta|rot4|side
 ```
 #### Palm Slabs
 ```
 Palm Slab
-Palm Slab|rot1|top
-Palm Slab|rot1|side
-Palm Slab|rot2|side
-Palm Slab|rot3|side
-Palm Slab|rot4|side
+Palm Slab|meta|rot1|top
+Palm Slab|meta|rot1|side
+Palm Slab|meta|rot2|side
+Palm Slab|meta|rot3|side
+Palm Slab|meta|rot4|side
 ```
 #### Pear Slabs
 ```
 Pear Slab
-Pear Slab|rot1|top
-Pear Slab|rot1|side
-Pear Slab|rot2|side
-Pear Slab|rot3|side
-Pear Slab|rot4|side
+Pear Slab|meta|rot1|top
+Pear Slab|meta|rot1|side
+Pear Slab|meta|rot2|side
+Pear Slab|meta|rot3|side
+Pear Slab|meta|rot4|side
 ```
 #### Cherry Slabs
 ```
@@ -646,14 +642,14 @@ Cherry Slab|meta|rot4|side
 ```
 #### Mango Slabs
 ```
-Mango Grass Slab
-Mango Grass Slab|meta|rot1|top
-Mango Grass Slab|meta|rot1|side
-Mango Grass Slab|meta|rot2|side
-Mango Grass Slab|meta|rot3|side
-Mango Grass Slab|meta|rot4|side
+Mango Slab
+Mango Slab|meta|rot1|top
+Mango Slab|meta|rot1|side
+Mango Slab|meta|rot2|side
+Mango Slab|meta|rot3|side
+Mango Slab|meta|rot4|side
 ```
-#### Spectral Slabs
+#### 
 ```
 Spectral Slab
 Spectral Slab|meta|rot1|top
@@ -663,7 +659,6 @@ Spectral Slab|meta|rot3|side
 Spectral Slab|meta|rot4|side
 ```
 ### Doors & Trapdoors
-
 #### Maple
 ##### Door
 ```
@@ -932,7 +927,7 @@ _Cherry Door Top|meta|rot3|open
 _Cherry Door Top|meta|rot4|closed
 _Cherry Door Top|meta|rot4|open
 ```
-##### TrapDoor
+##### Trapdoor
 ```
 Cherry Trapdoor
 Cherry Trapdoor|meta|rot1|open
@@ -1084,6 +1079,7 @@ Spectral Ladder|meta|rot3
 Spectral Ladder|meta|rot4
 ```
 ### Beds
+#### Leaf
 ```
 Leaf Bed
 Leaf Bed|meta|rot2
@@ -1093,6 +1089,360 @@ _Leaf Bed Head
 _Leaf Bed Head|meta|rot2
 _Leaf Bed Head|meta|rot3
 _Leaf Bed Head|meta|rot4
+```
+#### Strongbeds
+##### Red
+```
+Red Strongbed
+Red Strongbed|meta|rot2
+Red Strongbed|meta|rot3
+Red Strongbed|meta|rot4
+_Red Strongbed Head
+_Red Strongbed Head|meta|rot2
+_Red Strongbed Head|meta|rot3
+_Red Strongbed Head|meta|rot4
+```
+##### Lime
+```
+Lime Strongbed
+Lime Strongbed|meta|rot2
+Lime Strongbed|meta|rot3
+Lime Strongbed|meta|rot4
+_Lime Strongbed Head
+_Lime Strongbed Head|meta|rot2
+_Lime Strongbed Head|meta|rot3
+_Lime Strongbed Head|meta|rot4
+```
+##### Pink
+```
+Pink Strongbed
+Pink Strongbed|meta|rot2
+Pink Strongbed|meta|rot3
+Pink Strongbed|meta|rot4
+_Pink Strongbed Head
+_Pink Strongbed Head|meta|rot2
+_Pink Strongbed Head|meta|rot3
+_Pink Strongbed Head|meta|rot4
+```
+##### Gray
+```
+Gray Strongbed
+Gray Strongbed|meta|rot2
+Gray Strongbed|meta|rot3
+Gray Strongbed|meta|rot4
+_Gray Strongbed Head
+_Gray Strongbed Head|meta|rot2
+_Gray Strongbed Head|meta|rot3
+_Gray Strongbed Head|meta|rot4
+```
+##### Cyan
+```
+Cyan Strongbed
+Cyan Strongbed|meta|rot2
+Cyan Strongbed|meta|rot3
+Cyan Strongbed|meta|rot4
+_Cyan Strongbed Head
+_Cyan Strongbed Head|meta|rot2
+_Cyan Strongbed Head|meta|rot3
+_Cyan Strongbed Head|meta|rot4
+```
+##### Blue
+```
+Blue Strongbed
+Blue Strongbed|meta|rot2
+Blue Strongbed|meta|rot3
+Blue Strongbed|meta|rot4
+_Blue Strongbed Head
+_Blue Strongbed Head|meta|rot2
+_Blue Strongbed Head|meta|rot3
+_Blue Strongbed Head|meta|rot4
+```
+##### White
+```
+White Strongbed
+White Strongbed|meta|rot2
+White Strongbed|meta|rot3
+White Strongbed|meta|rot4
+_White Strongbed Head
+_White Strongbed Head|meta|rot2
+_White Strongbed Head|meta|rot3
+_White Strongbed Head|meta|rot4
+```
+##### Brown
+```
+Brown Strongbed
+Brown Strongbed|meta|rot2
+Brown Strongbed|meta|rot3
+Brown Strongbed|meta|rot4
+_Brown Strongbed Head
+_Brown Strongbed Head|meta|rot2
+_Brown Strongbed Head|meta|rot3
+_Brown Strongbed Head|meta|rot4
+```
+##### Green
+```
+Green Strongbed
+Green Strongbed|meta|rot2
+Green Strongbed|meta|rot3
+Green Strongbed|meta|rot4
+_Green Strongbed Head
+_Green Strongbed Head|meta|rot2
+_Green Strongbed Head|meta|rot3
+_Green Strongbed Head|meta|rot4
+```
+##### Black
+```
+Black Strongbed
+Black Strongbed|meta|rot2
+Black Strongbed|meta|rot3
+Black Strongbed|meta|rot4
+_Black Strongbed Head
+_Black Strongbed Head|meta|rot2
+_Black Strongbed Head|meta|rot3
+_Black Strongbed Head|meta|rot4
+```
+##### Orange
+```
+Orange Strongbed
+Orange Strongbed|meta|rot2
+Orange Strongbed|meta|rot3
+Orange Strongbed|meta|rot4
+_Orange Strongbed Head
+_Orange Strongbed Head|meta|rot2
+_Orange Strongbed Head|meta|rot3
+_Orange Strongbed Head|meta|rot4
+```
+##### Yellow
+```
+Yellow Strongbed
+Yellow Strongbed|meta|rot2
+Yellow Strongbed|meta|rot3
+Yellow Strongbed|meta|rot4
+_Yellow Strongbed Head
+_Yellow Strongbed Head|meta|rot2
+_Yellow Strongbed Head|meta|rot3
+_Yellow Strongbed Head|meta|rot4
+```
+##### Purple
+```
+Purple Strongbed
+Purple Strongbed|meta|rot2
+Purple Strongbed|meta|rot3
+Purple Strongbed|meta|rot4
+_Purple Strongbed Head
+_Purple Strongbed Head|meta|rot2
+_Purple Strongbed Head|meta|rot3
+_Purple Strongbed Head|meta|rot4
+```
+##### Magenta
+```
+Magenta Strongbed
+Magenta Strongbed|meta|rot2
+Magenta Strongbed|meta|rot3
+Magenta Strongbed|meta|rot4
+_Magenta Strongbed Head
+_Magenta Strongbed Head|meta|rot2
+_Magenta Strongbed Head|meta|rot3
+_Magenta Strongbed Head|meta|rot4
+```
+##### Light Blue
+```
+Light Blue Strongbed
+Light Blue Strongbed|meta|rot2
+Light Blue Strongbed|meta|rot3
+Light Blue Strongbed|meta|rot4
+_Light Blue Strongbed Head
+_Light Blue Strongbed Head|meta|rot2
+_Light Blue Strongbed Head|meta|rot3
+_Light Blue Strongbed Head|meta|rot4
+```
+##### Light Gray
+```
+Light Gray Strongbed
+Light Gray Strongbed|meta|rot2
+Light Gray Strongbed|meta|rot3
+Light Gray Strongbed|meta|rot4
+_Light Gray Strongbed Head
+_Light Gray Strongbed Head|meta|rot2
+_Light Gray Strongbed Head|meta|rot3
+_Light Gray Strongbed Head|meta|rot4
+```
+### Regular
+#### Red
+```
+Red Bed
+Red Bed|meta|rot2
+Red Bed|meta|rot3
+Red Bed|meta|rot4
+_Red Bed Head
+_Red Bed Head|meta|rot2
+_Red Bed Head|meta|rot3
+_Red Bed Head|meta|rot4
+```
+##### Lime
+```
+Lime Bed
+Lime Bed|meta|rot2
+Lime Bed|meta|rot3
+Lime Bed|meta|rot4
+_Lime Bed Head
+_Lime Bed Head|meta|rot2
+_Lime Bed Head|meta|rot3
+_Lime Bed Head|meta|rot4
+```
+##### Pink
+```
+Pink Bed
+Pink Bed|meta|rot2
+Pink Bed|meta|rot3
+Pink Bed|meta|rot4
+_Pink Bed Head
+_Pink Bed Head|meta|rot2
+_Pink Bed Head|meta|rot3
+_Pink Bed Head|meta|rot4
+```
+##### Gray
+```
+Gray Bed
+Gray Bed|meta|rot2
+Gray Bed|meta|rot3
+Gray Bed|meta|rot4
+_Gray Bed Head
+_Gray Bed Head|meta|rot2
+_Gray Bed Head|meta|rot3
+_Gray Bed Head|meta|rot4
+```
+##### Cyan
+```
+Cyan Bed
+Cyan Bed|meta|rot2
+Cyan Bed|meta|rot3
+Cyan Bed|meta|rot4
+_Cyan Bed Head
+_Cyan Bed Head|meta|rot2
+_Cyan Bed Head|meta|rot3
+_Cyan Bed Head|meta|rot4
+```
+##### Blue
+```
+Blue Bed
+Blue Bed|meta|rot2
+Blue Bed|meta|rot3
+Blue Bed|meta|rot4
+_Blue Bed Head
+_Blue Bed Head|meta|rot2
+_Blue Bed Head|meta|rot3
+_Blue Bed Head|meta|rot4
+```
+##### White
+```
+White Bed
+White Bed|meta|rot2
+White Bed|meta|rot3
+White Bed|meta|rot4
+_White Bed Head
+_White Bed Head|meta|rot2
+_White Bed Head|meta|rot3
+_White Bed Head|meta|rot4
+```
+##### Brown
+```
+Brown Bed
+Brown Bed|meta|rot2
+Brown Bed|meta|rot3
+Brown Bed|meta|rot4
+_Brown Bed Head
+_Brown Bed Head|meta|rot2
+_Brown Bed Head|meta|rot3
+_Brown Bed Head|meta|rot4
+```
+##### Green
+```
+Green Bed
+Green Bed|meta|rot2
+Green Bed|meta|rot3
+Green Bed|meta|rot4
+_Green Bed Head
+_Green Bed Head|meta|rot2
+_Green Bed Head|meta|rot3
+_Green Bed Head|meta|rot4
+```
+##### Black
+```
+Black Bed
+Black Bed|meta|rot2
+Black Bed|meta|rot3
+Black Bed|meta|rot4
+_Black Bed Head
+_Black Bed Head|meta|rot2
+_Black Bed Head|meta|rot3
+_Black Bed Head|meta|rot4
+```
+##### Orange
+```
+Orange Bed
+Orange Bed|meta|rot2
+Orange Bed|meta|rot3
+Orange Bed|meta|rot4
+_Orange Bed Head
+_Orange Bed Head|meta|rot2
+_Orange Bed Head|meta|rot3
+_Orange Bed Head|meta|rot4
+```
+##### Yellow
+```
+Yellow Bed
+Yellow Bed|meta|rot2
+Yellow Bed|meta|rot3
+Yellow Bed|meta|rot4
+_Yellow Bed Head
+_Yellow Bed Head|meta|rot2
+_Yellow Bed Head|meta|rot3
+_Yellow Bed Head|meta|rot4
+```
+##### Purple
+```
+Purple Bed
+Purple Bed|meta|rot2
+Purple Bed|meta|rot3
+Purple Bed|meta|rot4
+_Purple Bed Head
+_Purple Bed Head|meta|rot2
+_Purple Bed Head|meta|rot3
+_Purple Bed Head|meta|rot4
+```
+##### Magenta
+```
+Magenta Bed
+Magenta Bed|meta|rot2
+Magenta Bed|meta|rot3
+Magenta Bed|meta|rot4
+_Magenta Bed Head
+_Magenta Bed Head|meta|rot2
+_Magenta Bed Head|meta|rot3
+_Magenta Bed Head|meta|rot4
+```
+##### Light Blue
+```
+Light Blue Bed
+Light Blue Bed|meta|rot2
+Light Blue Bed|meta|rot3
+Light Blue Bed|meta|rot4
+_Light Blue Bed Head
+_Light Blue Bed Head|meta|rot2
+_Light Blue Bed Head|meta|rot3
+_Light Blue Bed Head|meta|rot4
+```
+##### Light Gray
+```
+Light Gray Bed
+Light Gray Bed|meta|rot2
+Light Gray Bed|meta|rot3
+Light Gray Bed|meta|rot4
+_Light Gray Bed Head
+_Light Gray Bed Head|meta|rot2
+_Light Gray Bed Head|meta|rot3
+_Light Gray Bed Head|meta|rot4
 ```
 ## Food
 ```
@@ -1121,65 +1471,65 @@ Engraved Stone
 ### Slabs
 ```
 Stone Slab
-Stone Slab|rot1|top
-Stone Slab|rot1|side
-Stone Slab|rot2|side
-Stone Slab|rot3|side
-Stone Slab|rot4|side
+Stone Slab|meta|rot1|top
+Stone Slab|meta|rot1|side
+Stone Slab|meta|rot2|side
+Stone Slab|meta|rot3|side
+Stone Slab|meta|rot4|side
 ```
 #### Messy
 ```
 Messy Stone Slab
-Messy Stone Slab|rot1|top
-Messy Stone Slab|rot1|side
-Messy Stone Slab|rot2|side
-Messy Stone Slab|rot3|side
-Messy Stone Slab|rot4|side
+Messy Stone Slab|meta|rot1|top
+Messy Stone Slab|meta|rot1|side
+Messy Stone Slab|meta|rot2|side
+Messy Stone Slab|meta|rot3|side
+Messy Stone Slab|meta|rot4|side
 ```
 #### Smooth
 ```
 Smooth Stone Slab
-Smooth Stone Slab|rot1|top
-Smooth Stone Slab|rot1|side
-Smooth Stone Slab|rot2|side
-Smooth Stone Slab|rot3|side
-Smooth Stone Slab|rot4|side
+Smooth Stone Slab|meta|rot1|top
+Smooth Stone Slab|meta|rot1|side
+Smooth Stone Slab|meta|rot2|side
+Smooth Stone Slab|meta|rot3|side
+Smooth Stone Slab|meta|rot4|side
 ```
 #### Engraved
 ```
 Engraved Stone Slab
-Engraved Stone Slab|rot1|top
-Engraved Stone Slab|rot1|side
-Engraved Stone Slab|rot2|side
-Engraved Stone Slab|rot3|side
-Engraved Stone Slab|rot4|side
+Engraved Stone Slab|meta|rot1|top
+Engraved Stone Slab|meta|rot1|side
+Engraved Stone Slab|meta|rot2|side
+Engraved Stone Slab|meta|rot3|side
+Engraved Stone Slab|meta|rot4|side
 ```
 #### Bricks
 ```
 Stone Bricks Slab
-Stone Bricks Slab|rot1|top
-Stone Bricks Slab|rot1|side
-Stone Bricks Slab|rot2|side
-Stone Bricks Slab|rot3|side
-Stone Bricks Slab|rot4|side
+Stone Bricks Slab|meta|rot1|top
+Stone Bricks Slab|meta|rot1|side
+Stone Bricks Slab|meta|rot2|side
+Stone Bricks Slab|meta|rot3|side
+Stone Bricks Slab|meta|rot4|side
 ```
 #### Mossy
 ```
 Mossy Stone Slab
-Mossy Stone Slab|rot1|top
-Mossy Stone Slab|rot1|side
-Mossy Stone Slab|rot2|side
-Mossy Stone Slab|rot3|side
-Mossy Stone Slab|rot4|side
+Mossy Stone Slab|meta|rot1|top
+Mossy Stone Slab|meta|rot1|side
+Mossy Stone Slab|meta|rot2|side
+Mossy Stone Slab|meta|rot3|side
+Mossy Stone Slab|meta|rot4|side
 ```
-###### Bricks
+##### Bricks
 ```
 Mossy Stone Bricks Slab
-Mossy Stone Bricks Slab|rot1|top
-Mossy Stone Bricks Slab|rot1|side
-Mossy Stone Bricks Slab|rot2|side
-Mossy Stone Bricks Slab|rot3|side
-Mossy Stone Bricks Slab|rot4|side
+Mossy Stone Bricks Slab|meta|rot1|top
+Mossy Stone Bricks Slab|meta|rot1|side
+Mossy Stone Bricks Slab|meta|rot2|side
+Mossy Stone Bricks Slab|meta|rot3|side
+Mossy Stone Bricks Slab|meta|rot4|side
 ```
 ### Bricks
 ```
@@ -1193,11 +1543,11 @@ Mossy Stone Bricks
 ```
 Cracked Stone Bricks
 ```
-##### Colored
+#### Colored
 ```
 Green Bricks
 ```
-###### Dark
+##### Dark
 ```
 Dark Red Brick
 Dark Green Bricks
@@ -1212,38 +1562,38 @@ Diorite Bricks
 #### Slabs
 ```
 Diorite Slab
-Diorite Slab|rot1|top
-Diorite Slab|rot1|side
-Diorite Slab|rot2|side
-Diorite Slab|rot3|side
-Diorite Slab|rot4|side
+Diorite Slab|meta|rot1|top
+Diorite Slab|meta|rot1|side
+Diorite Slab|meta|rot2|side
+Diorite Slab|meta|rot3|side
+Diorite Slab|meta|rot4|side
 ```
 ##### Smooth
 ```
 Smooth Diorite Slab
-Smooth Diorite Slab|rot1|top
-Smooth Diorite Slab|rot1|side
-Smooth Diorite Slab|rot2|side
-Smooth Diorite Slab|rot3|side
-Smooth Diorite Slab|rot4|side
+Smooth Diorite Slab|meta|rot1|top
+Smooth Diorite Slab|meta|rot1|side
+Smooth Diorite Slab|meta|rot2|side
+Smooth Diorite Slab|meta|rot3|side
+Smooth Diorite Slab|meta|rot4|side
 ```
 ##### Engraved
 ```
 Engraved Diorite Slab
-Engraved Diorite Slab|rot1|top
-Engraved Diorite Slab|rot1|side
-Engraved Diorite Slab|rot2|side
-Engraved Diorite Slab|rot3|side
-Engraved Diorite Slab|rot4|side
+Engraved Diorite Slab|meta|rot1|top
+Engraved Diorite Slab|meta|rot1|side
+Engraved Diorite Slab|meta|rot2|side
+Engraved Diorite Slab|meta|rot3|side
+Engraved Diorite Slab|meta|rot4|side
 ```
 ##### Bricks
 ```
 Diorite Bricks Slab
-Diorite Bricks Slab|rot1|top
-Diorite Bricks Slab|rot1|side
-Diorite Bricks Slab|rot2|side
-Diorite Bricks Slab|rot3|side
-Diorite Bricks Slab|rot4|side
+Diorite Bricks Slab|meta|rot1|top
+Diorite Bricks Slab|meta|rot1|side
+Diorite Bricks Slab|meta|rot2|side
+Diorite Bricks Slab|meta|rot3|side
+Diorite Bricks Slab|meta|rot4|side
 ```
 ### Andesite
 ```
@@ -1255,38 +1605,38 @@ Andesite Bricks
 #### Slabs
 ```
 Andesite Slab
-Andesite Slab|rot1|top
-Andesite Slab|rot1|side
-Andesite Slab|rot2|side
-Andesite Slab|rot3|side
-Andesite Slab|rot4|side
+Andesite Slab|meta|rot1|top
+Andesite Slab|meta|rot1|side
+Andesite Slab|meta|rot2|side
+Andesite Slab|meta|rot3|side
+Andesite Slab|meta|rot4|side
 ```
 ##### Smooth
 ```
 Smooth Andesite Slab
-Smooth Andesite Slab|rot1|top
-Smooth Andesite Slab|rot1|side
-Smooth Andesite Slab|rot2|side
-Smooth Andesite Slab|rot3|side
-Smooth Andesite Slab|rot4|side
+Smooth Andesite Slab|meta|rot1|top
+Smooth Andesite Slab|meta|rot1|side
+Smooth Andesite Slab|meta|rot2|side
+Smooth Andesite Slab|meta|rot3|side
+Smooth Andesite Slab|meta|rot4|side
 ```
 ##### Engraved
 ```
 Engraved Andesite Slab
-Engraved Andesite Slab|rot1|top
-Engraved Andesite Slab|rot1|side
-Engraved Andesite Slab|rot2|side
-Engraved Andesite Slab|rot3|side
-Engraved Andesite Slab|rot4|side
+Engraved Andesite Slab|meta|rot1|top
+Engraved Andesite Slab|meta|rot1|side
+Engraved Andesite Slab|meta|rot2|side
+Engraved Andesite Slab|meta|rot3|side
+Engraved Andesite Slab|meta|rot4|side
 ```
 ##### Bricks
 ```
 Andesite Bricks Slab
-Andesite Bricks Slab|rot1|top
-Andesite Bricks Slab|rot1|side
-Andesite Bricks Slab|rot2|side
-Andesite Bricks Slab|rot3|side
-Andesite Bricks Slab|rot4|side
+Andesite Bricks Slab|meta|rot1|top
+Andesite Bricks Slab|meta|rot1|side
+Andesite Bricks Slab|meta|rot2|side
+Andesite Bricks Slab|meta|rot3|side
+Andesite Bricks Slab|meta|rot4|side
 ```
 ### Granite
 ```
@@ -1298,58 +1648,58 @@ Granite Bricks
 #### Slabs
 ```
 Granite Slab
-Granite Slab|rot1|top
-Granite Slab|rot1|side
-Granite Slab|rot2|side
-Granite Slab|rot3|side
-Granite Slab|rot4|side
+Granite Slab|meta|rot1|top
+Granite Slab|meta|rot1|side
+Granite Slab|meta|rot2|side
+Granite Slab|meta|rot3|side
+Granite Slab|meta|rot4|side
 ```
 ##### Smooth
 ```
 Smooth Granite Slab
-Smooth Granite Slab|rot1|top
-Smooth Granite Slab|rot1|side
-Smooth Granite Slab|rot2|side
-Smooth Granite Slab|rot3|side
-Smooth Granite Slab|rot4|side
+Smooth Granite Slab|meta|rot1|top
+Smooth Granite Slab|meta|rot1|side
+Smooth Granite Slab|meta|rot2|side
+Smooth Granite Slab|meta|rot3|side
+Smooth Granite Slab|meta|rot4|side
 ```
 ##### Engraved
 ```
 Engraved Granite Slab
-Engraved Granite Slab|rot1|top
-Engraved Granite Slab|rot1|side
-Engraved Granite Slab|rot2|side
-Engraved Granite Slab|rot3|side
-Engraved Granite Slab|rot4|side
+Engraved Granite Slab|meta|rot1|top
+Engraved Granite Slab|meta|rot1|side
+Engraved Granite Slab|meta|rot2|side
+Engraved Granite Slab|meta|rot3|side
+Engraved Granite Slab|meta|rot4|side
 ```
-##### Bricks 
+##### Bricks
 ```
 Granite Bricks Slab
-Granite Bricks Slab|rot1|top
-Granite Bricks Slab|rot1|side
-Granite Bricks Slab|rot2|side
-Granite Bricks Slab|rot3|side
-Granite Bricks Slab|rot4|side
+Granite Bricks Slab|meta|rot1|top
+Granite Bricks Slab|meta|rot1|side
+Granite Bricks Slab|meta|rot2|side
+Granite Bricks Slab|meta|rot3|side
+Granite Bricks Slab|meta|rot4|side
 ```
 ### Sandstone Bricks
 ```
 Sandstone Bricks
 Sandstone Bricks Slab
-Sandstone Bricks Slab|rot1|top
-Sandstone Bricks Slab|rot1|side
-Sandstone Bricks Slab|rot2|side
-Sandstone Bricks Slab|rot3|side
-Sandstone Bricks Slab|rot4|side
+Sandstone Bricks Slab|meta|rot1|top
+Sandstone Bricks Slab|meta|rot1|side
+Sandstone Bricks Slab|meta|rot2|side
+Sandstone Bricks Slab|meta|rot3|side
+Sandstone Bricks Slab|meta|rot4|side
 ```
 #### Red
 ```
 Red Sandstone Bricks
 Red Sandstone Bricks Slab
-Red Sandstone Bricks Slab|rot1|top
-Red Sandstone Bricks Slab|rot1|side
-Red Sandstone Bricks Slab|rot2|side
-Red Sandstone Bricks Slab|rot3|side
-Red Sandstone Bricks Slab|rot4|side
+Red Sandstone Bricks Slab|meta|rot1|top
+Red Sandstone Bricks Slab|meta|rot1|side
+Red Sandstone Bricks Slab|meta|rot2|side
+Red Sandstone Bricks Slab|meta|rot3|side
+Red Sandstone Bricks Slab|meta|rot4|side
 ```
 ### Compressed Messy Stone
 ```
@@ -1367,13 +1717,13 @@ Bricks
 #### Slabs
 ```
 Bricks Slab
-Bricks Slab|rot1|top
-Bricks Slab|rot1|side
-Bricks Slab|rot2|side
-Bricks Slab|rot3|side
-Bricks Slab|rot4|side
+Bricks Slab|meta|rot1|top
+Bricks Slab|meta|rot1|side
+Bricks Slab|meta|rot2|side
+Bricks Slab|meta|rot3|side
+Bricks Slab|meta|rot4|side
 ```
-### Obsidian & Bedrock
+#### Obsidian & Bedrock
 ```
 Obsidian
 Bedrock
@@ -2110,7 +2460,7 @@ Black Chalk Bricks Slab|meta|rot2|side
 Black Chalk Bricks Slab|meta|rot3|side
 Black Chalk Bricks Slab|meta|rot4|side
 ```
-## Lighting
+## Lightning
 ```
 Dim Lamp On
 Dim Lamp Off
@@ -2132,9 +2482,9 @@ Chest|meta|rot4
 ### Loot
 ```
 Loot Chest
-Loot Chest|meta|rot|2
-Loot Chest|meta|rot|3
-Loot Chest|meta|rot|4
+Loot Chest|meta|rot2
+Loot Chest|meta|rot3
+Loot Chest|meta|rot4
 ```
 ### Moonstone
 ```
@@ -2143,7 +2493,7 @@ Moonstone Chest|meta|rot2
 Moonstone Chest|meta|rot3
 Moonstone Chest|meta|rot4
 ```
-### MailBoxes
+### Mailboxes
 ```
 Mailbox
 Mailbox|meta|rot2|empty
@@ -2225,7 +2575,7 @@ Iceball Block
 Toxin Ball Block
 ```
 ## Paintball
-### Regular Explosive
+### Regular Explosives
 ```
 Yellow Paintball Explosive
 White Paintball Explosive
@@ -2244,7 +2594,7 @@ Brown Paintball Explosive
 Blue Paintball Explosive
 Black Paintball Explosive
 ```
-### Quick Explosive
+### Quick Paintball Explosives
 ```
 Yellow Quick Paintball Explosive
 White Quick Paintball Explosive
@@ -2263,7 +2613,7 @@ Brown Quick Paintball Explosive
 Blue Quick Paintball Explosive
 Black Quick Paintball Explosive
 ```
-### Seeking Explosive
+### Seeking Explosives
 ```
 Yellow Seeking Paintball Explosive
 White Seeking Paintball Explosive
@@ -2282,7 +2632,7 @@ Brown Seeking Paintball Explosive
 Blue Seeking Paintball Explosive
 Black Seeking Paintball Explosive
 ```
-### Sticky Explosive
+### Sticky Explosives
 ```
 Yellow Sticky Paintball Explosive
 White Sticky Paintball Explosive
@@ -2324,19 +2674,19 @@ Spawn Block (Brown)
 Spawn Block (Blue)
 Spawn Block (Black)
 ```
-## Check Point Block
+## Checkpoint Block
 ```
-Check Point Block
-Check Point Block|meta|rot|2
-Check Point Block|meta|rot|3
-Check Point Block|meta|rot|4
+Checkpoint Block
+Checkpoint Block|meta|rot2
+Checkpoint Block|meta|rot3
+Checkpoint Block|meta|rot4
 ```
 ## Custom Lobby Block
 ```
 Custom Lobby Block
-Custom Lobby Block|meta|rot|2
-Custom Lobby Block|meta|rot|3
-Custom Lobby Block|meta|rot|4
+Custom Lobby Block|meta|rot2
+Custom Lobby Block|meta|rot3
+Custom Lobby Block|meta|rot4
 ```
 ## Spawners
 ```
@@ -2357,7 +2707,7 @@ Gold Watermelon Stag Spawner Block
 Gorilla Spawner Block
 Cave Golem Spawner Block
 ```
-#### Drauger
+#### Draugr
 ```
 Draugr Zombie Spawner Block
 Draugr Skeleton Spawner Block
@@ -2369,9 +2719,9 @@ Frost Golem Spawner Block
 Frost Zombie Spawner Block
 Frost Skeleton Spawner Block
 ```
-### Nuetral Mobs
+### Neutral
 > [!NOTE]
-> By nuetral we mean that these mobs can be hostile, passive, and friendly
+> By neutral we mean that these mobs can be hostile, passive and friendly
 ```
 Wolf Spawner Block
 Wildcat Spawner Block
@@ -2396,23 +2746,23 @@ Generator Spawn Block (Gray)
 ### Trader Shop Spawn
 ```
 Trader Shop Spawn Block
-Trader Shop Spawn Block|meta|rot|2
-Trader Shop Spawn Block|meta|rot|3
-Trader Shop Spawn Block|meta|rot|4
+Trader Shop Spawn Block|meta|rot2
+Trader Shop Spawn Block|meta|rot3
+Trader Shop Spawn Block|meta|rot4
 ```
 ### Wizard Shop Spawn
 ```
 Wizard Shop Spawn Block
-Wizard Shop Spawn Block|meta|rot|2
-Wizard Shop Spawn Block|meta|rot|3
-Wizard Shop Spawn Block|meta|rot|4
+Wizard Shop Spawn Block|meta|rot2
+Wizard Shop Spawn Block|meta|rot3
+Wizard Shop Spawn Block|meta|rot4
 ```
 ## Bones
 ```
 Bone Block
 ```
 ## Antlers
-### Bone Antlers
+### Bone Antler
 ```
 Bone Antlers
 Bone Antlers|meta|rot2
@@ -2426,7 +2776,7 @@ Gold Antlers|meta|rot2
 Gold Antlers|meta|rot3
 Gold Antlers|meta|rot4
 ```
-## Tables/benches
+## Tables/Benches
 ### Furnace
 ```
 Furnace
@@ -2434,7 +2784,7 @@ Furnace|meta|rot2
 Furnace|meta|rot3
 Furnace|meta|rot4
 ```
-### WorkBench
+### Workbench
 ```
 Workbench
 Workbench|meta|rot2
@@ -2467,7 +2817,6 @@ Wood Enchanting Table|meta|rot2
 Wood Enchanting Table|meta|rot3
 Wood Enchanting Table|meta|rot4
 ```
-
 #### Stone
 ```
 Stone Enchanting Table
@@ -2496,7 +2845,7 @@ Diamond Enchanting Table|meta|rot2
 Diamond Enchanting Table|meta|rot3
 Diamond Enchanting Table|meta|rot4
 ```
-## Misc
+## Miscellaneous
 ```
 Goal Block (Red)
 Goal Block (Blue)
@@ -2506,7 +2855,6 @@ Water
 Invisible Solid
 Sponge
 temp
-Enough
 ```
 ### Obby
 ```
@@ -2525,5 +2873,4 @@ Placeholder Blue Ice
 ReservedBread BlockRotation1
 ReservedBread BlockRotation2
 ReservedBread BlockRotation3
-
 ```
