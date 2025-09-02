@@ -275,7 +275,15 @@ music = null
 musicVolumeLevel = 0.6
 ```
 
-### Zoom Options
+### Camera Options
+```js
+/**
+ * RGBA array [r, g, b, a] for camera screen tint effect. Values fall between 0 and 1.
+ * @type {[number, number, number, number]}
+ */
+cameraTint = null
+```
+
 ```js
 /**
  * Default camera zoom level for the player
