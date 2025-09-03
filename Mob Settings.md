@@ -312,9 +312,50 @@ attackEffectDuration = 0
 
 ```js
 /**
- * @type {Readonly<MobTameInfo>}
+ * @type {MobTameInfo}
  */
-tameInfo = null
+tameInfo = {
+    tameItemName: [
+        "Raw Porkchop",
+        "Raw Beef",
+        "Raw Mutton",
+        "Raw Venison",
+        "Cooked Porkchop",
+        "Steak",
+        "Cooked Mutton",
+        "Cooked Venison"
+    ],
+    probabilityOfTame: 0.32,
+    isSaddleable: false,
+    foodItemNames: [
+        "Raw Porkchop",
+        "Raw Beef",
+        "Raw Mutton",
+        "Raw Venison",
+        "Cooked Porkchop",
+        "Steak",
+        "Cooked Mutton",
+        "Cooked Venison",
+        "Rotten Flesh"
+    ],
+    foodItemsWithEffects: [
+        {
+            itemName: "Catnip",
+            effects: [
+                {
+                    name: "Speed",
+                    duration: 30000,
+                    level: 1
+                },
+                {
+                    name: "Damage",
+                    duration: 30000,
+                    level: 1
+                }
+            ]
+        }
+    ]
+}
 ```
 
 ```js
@@ -360,6 +401,8 @@ metaInfo = ""
 ```
 
 ## Mob Types and Variations
+> [!NOTE]
+> This is not from the offical documentation, this was put together by NlGBOB
 
 ```json
 {
@@ -399,4 +442,31 @@ metaInfo = ""
   "Magma Golem": ["default"],
   "Pig": ["default"]
 }
+```
+> [!NOTE]
+> From the offical documentation:
+
+Some mob types support variations other than just `"default"`:
+
+```js
+Pig: "default"
+Cow: "default", "cream"
+Sheep: "default"
+Horse: "default", "black", "brown", "cream"
+Cave Golem: "default", "iron"
+Draugr Zombie: "default", "longHairChestplate", "longHairClothed", "shortHairClothed"
+Draugr Skeleton: "default"
+Frost Golem: "default"
+Frost Zombie: "default", "longHairChestplate", "shortHairClothed"
+Frost Skeleton: "default"
+Draugr Knight: "default"
+Wolf: "default", "white", "brown", "grey", "spectral"
+Bear: "default"
+Deer: "default"
+Stag: "default"
+Gold Watermelon Stag: "default"
+Gorilla: "default"
+Wildcat: "default", "tabby", "grey", "black", "calico", "siamese", "leopard"
+Magma Golem: "default"
+Draugr Huntress: "default", "chainmail"
 ```
