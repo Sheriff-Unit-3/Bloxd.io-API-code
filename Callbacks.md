@@ -27,7 +27,8 @@ tick = () => {}			 or			 function tick() {}
 ```
 
 > [!NOTE]
-> Below is all the callbacks that you can use in Bloxd.io, there are non missing as of 08/03/2025 (mm/dd/yyyy).
+> Below is all the callbacks that you can use in Bloxd.io, there are headers above each.
+
 ### Tick
 ```js
 /**
