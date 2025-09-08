@@ -117,7 +117,7 @@ killfeedColour = ""
 
 ```js
 /**
- * Scaling of mesh nodes, see api.scalePlayerMeshNodes
+ * Scaling of mesh nodes, see bottom of this page for EntityMeshScalingMap
  * @type {EntityMeshScalingMap}
  */
 meshScaling = {}
@@ -168,3 +168,17 @@ hasPriorityNametag = false
  */
 nameColour = "default"
 ```
+
+## Extra Information
+```js
+type EntityMeshScalingMap = { [key in "TorsoNode" | "HeadMesh" | "ArmRightMesh" | "ArmLeftMesh" | "LegLeftMesh" | "LegRightMesh"]?: number[] }
+```
+
+```js
+type EntityName = {
+    entityName: string
+    style?: {
+        color?: string
+        colour?: string
+    }
+}
