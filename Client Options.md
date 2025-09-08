@@ -768,3 +768,68 @@ ttbMultiplier = 1
  */
 strictFluidBuckets = true
 ```
+
+## Extra Information
+```js
+type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | StyledText)[]
+```
+
+```js
+type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Thief" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment" | "Health" | "HealthShield"
+```
+
+```js
+type StyledIcon = {
+    icon: string
+    style?: {
+        color?: string
+        colour?: string
+        fontSize?: string
+        opacity?: number
+    }
+}
+```
+
+```js
+type StyledText = {
+    str: string | EntityName | TranslatedText
+    style?: {
+        color?: string
+        colour?: string
+        fontWeight?: string
+        fontSize?: string
+        fontStyle?: string
+        opacity?: number
+    }
+    clickableUrl?: string
+}
+```
+
+```js
+type TranslatedText = {
+    translationKey: string
+    params?: Record<string, string | number | boolean | EntityName>
+}
+```
+
+```js
+type EarthSkyBox = {
+    type: "earth"
+    inclination?: number
+    turbidity?: number
+    infiniteDistance?: number
+    luminance?: number
+    yCameraOffset?: number
+    azimuth?: number
+    // Not part of sky model by default; heavily tint to a vertex color
+    vertexTint?: [number, number, number]
+}
+```
+
+```js
+enum WalkThroughType {
+    CANT_WALK_THROUGH = 0,
+    CAN_WALK_THROUGH = 1,
+    DEFAULT_WALK_THROUGH = 2,
+}
+```
