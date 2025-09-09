@@ -182,3 +182,8 @@ type EntityName = {
         colour?: string
     }
 }
+```
+
+```js
+type MeshTypes = [null, BloxdBlock, ParticleEmitter]
+```
