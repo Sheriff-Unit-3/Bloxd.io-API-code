@@ -23,7 +23,6 @@ api.changePlayerIntoSkin(myId, 'body', ''Wizard')
 `driving`  
 `zombie`  
 
-```
 ## Function
 ```js
 api.setPlayerPose(myId, 'standing')
