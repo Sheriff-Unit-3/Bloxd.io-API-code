@@ -1954,6 +1954,17 @@ type WorldBlockChangedInfo = {
 }
 ```
 
+```js
+SkyBoxOptions = [
+        earth,
+        interstellar,
+        space_lightblue,
+        space_blue,
+        space_red,
+        underwater
+]
+```
+
 ## Enchants
 > [!NOTE]
 > Thank you to the_ccccc for sharing this!
