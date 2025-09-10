@@ -833,3 +833,14 @@ enum WalkThroughType {
     DEFAULT_WALK_THROUGH = 2,
 }
 ```
+
+```js
+SkyBoxOptions = [
+        earth,
+        interstellar,
+        space_lightblue,
+        space_blue,
+        space_red,
+        underwater
+]
+```
