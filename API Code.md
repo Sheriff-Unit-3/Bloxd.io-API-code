@@ -998,7 +998,8 @@ applyAuraChange(playerId, auraDiff)
  * @returns {MobHerdId}
  */
 createMobHerd()
-
+```
+```js
 /**
  * Try to spawn a mob into the world at a given position. Returns null on failure.
  * WARNING: Either the "onPlayerAttemptSpawnMob" or the "onWorldAttemptSpawnMob" game callback will be called
@@ -1018,7 +1019,8 @@ createMobHerd()
  * @returns {PNull<MobId>}
  */
 attemptSpawnMob(mobType, x, y, z, opts)
-
+```
+```js
 /**
  * Dispose of a mob's state and remove them from the world without triggering "on death" flows.
  * Always succeeds.
@@ -1026,7 +1028,8 @@ attemptSpawnMob(mobType, x, y, z, opts)
  * @returns {void}
  */
 despawnMob(mobId)
-
+```
+```js
 /**
  * Returns the current default value for a mob setting.
  *
@@ -1035,7 +1038,8 @@ despawnMob(mobId)
  * @returns {MobSettings<TMobType>[TMobSetting]}
  */
 getDefaultMobSetting(mobType, setting)
-
+```
+```js
 /**
  * Set the default value for a mob setting.
  * @param {TMobType} mobType
@@ -1044,7 +1048,8 @@ getDefaultMobSetting(mobType, setting)
  * @returns {void}
  */
 setDefaultMobSetting(mobType, setting, value)
-
+```
+```js
 /**
  * Get the current value of a mob setting for a specific mob.
  * @param {MobId} mobId
@@ -1052,7 +1057,8 @@ setDefaultMobSetting(mobType, setting, value)
  * @returns {MobSettings<MobType>[TMobSetting]}
  */
 getMobSetting(mobId, setting)
-
+```
+```js
 /**
  * Set the current value of a mob setting for a specific mob.
  * @param {MobId} mobId
@@ -1061,13 +1067,15 @@ getMobSetting(mobId, setting)
  * @returns {void}
  */
 setMobSetting(mobId, setting, value)
-
+```
+```js
 /**
  * Get the number of mobs in the world.
  * @returns {number}
  */
 getNumMobs()
-
+```
+```js
 /**
  * Get the mob IDs of all mobs in the world.
  * @returns {MobId[]}
@@ -1086,7 +1094,8 @@ getMobIds()
  * @returns {boolean} - boolean
  */
 isBlockInLoadedChunk(x, y, z)
-
+```
+```js
 /**
  * Get the name of a block.
  * @param {number | number[]} x - could be an array [x, y, z]. If so, the other params shouldn't be passed.
@@ -1095,7 +1104,8 @@ isBlockInLoadedChunk(x, y, z)
  * @returns {BlockName} - blockName - will be a name contained in blockMetadata.ts or 'Air'
  */
 getBlock(x, y, z)
-
+```
+```js
 /**
  * Used to get the block id at a specific position.
  * Intended only for use in hot code paths - default to getBlock for most use cases
@@ -1106,7 +1116,8 @@ getBlock(x, y, z)
  * @returns {BlockId}
  */
 getBlockId(x, y, z)
-
+```
+```js
 /**
  * Set a block. Valid names are those either contained in blockMetadata.ts or are 'Air'
  *
@@ -1125,7 +1136,8 @@ getBlockId(x, y, z)
  * @returns {void}
  */
 setBlock(x, y, z, blockName)
-
+```
+```js
 /**
  * Initiate a block change "by the world".
  * This ends up calling the onWorldChangeBlock and only makes the change if not prevented by game/plugins.
@@ -1457,7 +1469,8 @@ getBlockData(x, y, z)
  * @returns {PNull<EntityId>} - the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
  */
 createItemDrop(x, y, z, itemName, amount, mergeItems, attributes, timeTillDespawn)
-
+```
+```js
 /**
  * Prevent a player from picking up an item. itemId returned by createItemDrop
  *
@@ -1466,7 +1479,8 @@ createItemDrop(x, y, z, itemName, amount, mergeItems, attributes, timeTillDespaw
  * @returns {void}
  */
 setCantPickUpItem(playerId, itemId)
-
+```
+```js
 /**
  * Delete an item drop by item drop entity ID
  *
@@ -1474,7 +1488,8 @@ setCantPickUpItem(playerId, itemId)
  * @returns {void}
  */
 deleteItemDrop(itemId)
-
+```
+```js
 /**
  * Get the metadata about a block or item before stats have been modified by any client options
  * (i.e. its entry in either blockMetadata.ts or nonBlockMetadata in itemMetadata.ts)
@@ -1483,7 +1498,8 @@ deleteItemDrop(itemId)
  * @returns {Partial<BlockMetadataItem & NonBlockMetadataItem>}
  */
 getInitialItemMetadata(itemName)
-
+```
+```js
 /**
  * Get stat info about a block or item
  * Either based on a client option for a player: (e.g. `DirtTtb`)
@@ -1498,7 +1514,8 @@ getInitialItemMetadata(itemName)
  * @returns {AnyMetadataItem[K]}
  */
 getItemStat(LifeformId, itemName, stat)
-
+```
+```js
 /**
  * Give a player an item and a certain amount of that item.
  * Returns the amount of item added to the users inventory.
@@ -1510,14 +1527,16 @@ getItemStat(LifeformId, itemName, stat)
  * @returns {number}
  */
 giveItem(playerId, itemName, itemAmount, attributes)
-
+```
+```js
 /**
  * Whether the player has space in their inventory to get new blocks
  * @param {PlayerId} playerId
  * @returns {boolean}
  */
 inventoryIsFull(playerId)
-
+```
+```js
 /**
  * Put an item in a specific index. Default hotbar is indexes 0-9
  *
@@ -1530,7 +1549,8 @@ inventoryIsFull(playerId)
  * @returns {void}
  */
 setItemSlot(playerId, itemSlotIndex, itemName, itemAmount, attributes, tellClient)
-
+```
+```js
 /**
  * Remove an amount of item from a player's inventory
  *
@@ -1540,7 +1560,8 @@ setItemSlot(playerId, itemSlotIndex, itemName, itemAmount, attributes, tellClien
  * @returns {void}
  */
 removeItemName(playerId, itemName, amount)
-
+```
+```js
 /**
  * Get the item at a specific index
  * Returns null if there is no item at that index
@@ -1551,7 +1572,8 @@ removeItemName(playerId, itemName, amount)
  * @returns {PNull<InvenItem>}
  */
 getItemSlot(playerId, itemSlotIndex)
-
+```
+```js
 /**
  * Whether a player has an item
  *
@@ -1560,7 +1582,8 @@ getItemSlot(playerId, itemSlotIndex)
  * @returns {boolean} - bool
  */
 hasItem(playerId, itemName)
-
+```
+```js
 /**
  * The amount of an itemName a player has.
  * Returns 0 if the player has none, and a negative number if infinite.
@@ -1570,7 +1593,8 @@ hasItem(playerId, itemName)
  * @returns {number} - number
  */
 getInventoryItemAmount(playerId, itemName)
-
+```
+```js
 /**
  * Clear the players inventory
  *
@@ -1578,7 +1602,8 @@ getInventoryItemAmount(playerId, itemName)
  * @returns {void}
  */
 clearInventory(playerId)
-
+```
+```js
 /**
  * Force the player to have the ith inventory slot selected. E.g. newI 0 makes the player have the 0th inventory slot selected
  *
@@ -1587,14 +1612,16 @@ clearInventory(playerId)
  * @returns {void}
  */
 setSelectedInventorySlotI(playerId, newI)
-
+```
+```js
 /**
  * Get a player's currently selected inventory slot
  * @param {PlayerId} playerId
  * @returns {number}
  */
 getSelectedInventorySlotI(playerId)
-
+```
+```js
 /**
  * Get the currently held item of a player
  * Returns null if no item is being held
@@ -1604,7 +1631,8 @@ getSelectedInventorySlotI(playerId)
  * @returns {PNull<InvenItem>}
  */
 getHeldItem(playerId)
-
+```
+```js
 /**
  * Get the amount of free slots in a player's inventory.
  *
@@ -1612,7 +1640,8 @@ getHeldItem(playerId)
  * @returns {number} - number
  */
 getInventoryFreeSlotCount(playerId)
-
+```
+```js
 /**
  * Checks if a player is able to open a chest at a given location,
  * as per the rules laid out by the "onPlayerAttemptOpenChest" game callback.
@@ -1625,7 +1654,8 @@ getInventoryFreeSlotCount(playerId)
  * @returns {PNull<boolean>}
  */
 canOpenStandardChest(playerId, chestX, chestY, chestZ)
-
+```
+```js
 /**
  * Give a standard chest an item and a certain amount of that item.
  * Returns the amount of item added to the chest.
@@ -1638,7 +1668,8 @@ canOpenStandardChest(playerId, chestX, chestY, chestZ)
  * @returns {number}
  */
 giveStandardChestItem(chestPos, itemName, itemAmount, playerId, attributes)
-
+```
+```js
 /**
  * Get the amount of free slots in a standard chest
  * Returns null for non-chests
@@ -1647,7 +1678,8 @@ giveStandardChestItem(chestPos, itemName, itemAmount, playerId, attributes)
  * @returns {PNull<number>} - number
  */
 getStandardChestFreeSlotCount(chestPos)
-
+```
+```js
 /**
  * The amount of an itemName a standard chest has.
  * Returns 0 if the standard chest has none, and a negative number if infinite.
@@ -1657,7 +1689,8 @@ getStandardChestFreeSlotCount(chestPos)
  * @returns {number} - number
  */
 getStandardChestItemAmount(chestPos, itemName)
-
+```
+```js
 /**
  * Get the item at a chest slot. Null if empty otherwise format {name: itemName, amount: amountOfItem}
  *
@@ -1666,7 +1699,8 @@ getStandardChestItemAmount(chestPos, itemName)
  * @returns {PNull<InvenItem>}
  */
 getStandardChestItemSlot(chestPos, idx)
-
+```
+```js
 /**
  * Get all the items from a standard chest in order. Use this instead of repetitive calls to getStandardChestItemSlot
  *
@@ -1674,7 +1708,8 @@ getStandardChestItemSlot(chestPos, idx)
  * @returns {PNull<InvenItem>[]}
  */
 getStandardChestItems(chestPos)
-
+```
+```js
 /**
  * @param {number[]} chestPos
  * @param {number} idx - 0-indexed
@@ -1685,7 +1720,8 @@ getStandardChestItems(chestPos)
  * @returns {void}
  */
 setStandardChestItemSlot(chestPos, idx, itemName, itemAmount, playerId, attributes)
-
+```
+```js
 /**
  * Get the item in a player's moonstone chest slot. Null if empty
  *
@@ -1696,7 +1732,8 @@ setStandardChestItemSlot(chestPos, idx, itemName, itemAmount, playerId, attribut
  * @returns {PNull<InvenItem>}
  */
 getMoonstoneChestItemSlot(playerId, idx)
-
+```
+```js
 /**
  * Get all the items from a moonstone chest in order. Use this instead of repetitive calls to getMoonstoneChestItemSlot
  *
@@ -1706,7 +1743,8 @@ getMoonstoneChestItemSlot(playerId, idx)
  * @returns {PNull<InvenItem>[]}
  */
 getMoonstoneChestItems(playerId)
-
+```
+```js
 /**
  * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
  *
@@ -1718,7 +1756,8 @@ getMoonstoneChestItems(playerId)
  * @returns {void}
  */
 setMoonstoneChestItemSlot(playerId, idx, itemName, itemAmount, metadata)
-
+```
+```js
 /**
  * Edit the crafting recipes for a player
  *
@@ -1728,7 +1767,8 @@ setMoonstoneChestItemSlot(playerId, idx, itemName, itemAmount, metadata)
  * @returns {void}
  */
 editItemCraftingRecipes(playerId, itemName, recipesForItem)
-
+```
+```js
 /**
  * Reset the crafting recipes for a given back to its original bloxd state
  *
@@ -1768,13 +1808,15 @@ setItemAmount(itemId, newAmount)
  * @returns {number}
  */
 now()
-
+```
+```js
 /**
  * Get the name of the lobby this game is running in.
  * @returns {PNull<string>}
  */
 getLobbyName()
-
+```
+```js
 /**
  * Integer lobby names are public
  * @returns {boolean} - boolean
