@@ -1998,6 +1998,7 @@ type WorldBlockChangedInfo = {
 
 ```js
 SkyBoxOptions = [
+        default,
         earth,
         interstellar,
         space_lightblue,
