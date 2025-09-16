@@ -187,3 +187,6 @@ type EntityName = {
 ```js
 type MeshTypes = [null, BloxdBlock, ParticleEmitter]
 ```
+```js
+type BoxMeshTypes = [Person, Box, BlockBlock, ParticleEmitter]
+```
