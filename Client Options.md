@@ -836,6 +836,7 @@ enum WalkThroughType {
 
 ```js
 SkyBoxOptions = [
+        default,
         earth,
         interstellar,
         space_lightblue,
