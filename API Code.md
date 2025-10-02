@@ -757,13 +757,26 @@ progressBarUpdate(playerId, toFraction, toDuration)
 
 ```js
 /**
- * Spin player in kart
+ * This will initiate the MiddleScreenBar, starting at empty and filling up to full over the given duration.
+ * Good to represent cooldowns (eg gun reload) or charged items (eg crossbow)
+ *
  * @param {PlayerId} playerId
- * @param {number} dir - direction of spin, 1 for right, -1 for left
- * @param {number} durationInTicks - the number of ticks it takes to complete a spin
+ * @param {number} duration - ms over which the MiddleScreenBar fills up
+ * @param {boolean} [chargeExpiresAutomatically] - Defaults to true. If true, the bar will disappear upon reaching full. If false, the bar will remain at full until hidden with removeMiddleScreenBar
+ * @param {number} [horizontalBarRemOffset] - Offset the bar left or right (in css unit - rem)
  * @returns {void}
  */
-spinKart(playerId, dir, durationInTicks)
+initiateMiddleScreenBar(playerId, duration, chargeExpiresAutomatically, horizontalBarRemOffset)
+```
+
+```js
+/**
+ * If there is any current middle screen bar running, this will hide it
+ *
+ * @param {PlayerId} playerId
+ * @returns {void}
+ */
+removeMiddleScreenBar(playerId)
 ```
 
 ```js
