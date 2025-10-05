@@ -393,6 +393,7 @@ calcExplosionForce(eId, explosionType, knockbackFactor, explosionRadius, explosi
 ```js
 /**
  * Get all the player ids.
+ * This calls getEntitiesInRect for all loaded chunks
  * @returns {PlayerId[]}
  */
 getPlayerIds()
