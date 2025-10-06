@@ -174,6 +174,8 @@ onPlayerSelectInventorySlot = (playerId, slotIndex) => {}
 ```js
 /**
  * Called when a player stands on a block
+ * This can run at 20-80 ticks per second times the number of players
+ * Making this the fastest callback known, but it's prone to interruptions
  * @param {PlayerId} playerId - The id of the player that stood on the block
  * @param {number} x - The x coordinate of the block that was stood on
  * @param {number} y - The y coordinate of the block that was stood on
@@ -736,7 +738,7 @@ onPlayerFinishChargingItem = (playerId, used, itemName, duration) => {}
 ### doPeriodicSave
 ```js
 /**
- * Called every so often.
+ * Called every 2 mins.
  * You should save custom db values/s3 objects here.
  * Persisted items ARE saved on graceful shutdown (e.g. uncaught error, update, etc),
  * but this helps prevent large data-loss on non-graceful shutdowns.
