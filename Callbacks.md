@@ -325,7 +325,7 @@ onPlayerAttemptAltAction = (playerId, x, y, z, block, targetEId) => {}
  * @param {BlockName} block - The name of the targeted block
  * @param {EntityId | null} targetEId - The id of the targeted entity
  */
-onPlayerAltAction = (playerId, x, y, z, block, targetEId) => {}
+onPlayerAltAction = (playerId, x, y, z, blockName, targetEId) => {}
 ```
 ### onPlayerClick
 ```js
@@ -335,8 +335,12 @@ onPlayerAltAction = (playerId, x, y, z, block, targetEId) => {}
  * as it'll always be false for touchscreen players.
  * @param {PlayerId} playerId - The id of the player clicking
  * @param {boolean} wasAltClick - Whether the click was an alt click (e.g. right click
+ * @param {number} x - The x coordinate of the targeted block
+ * @param {number} y - The y coordinate of the targeted block
+ * @param {number} z - The z coordinate of the targeted block
+ * @param {BlockName} block - The name of the targeted block
  */
-onPlayerClick = (playerId, wasAltClick) => {}
+onPlayerClick = (playerId, wasAltClick, x, y, z, blockName) => {}
 ```
 ### onClientOptionUpdated
 ```js
