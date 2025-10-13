@@ -89,6 +89,9 @@ onRespawnRequest = (playerId) => {}
  * Called when a player sends a command
  * @param playerId - The id of the player that sent the command
  * @param command - The command that the player sent
+ * @return true - Stops built-in commands from running, blocks error message, runs custom code
+ * @return false - Stops built-in commands from running, sends an error message, runs custom code
+ * @return undefined - Sends error message for commands that aren't built-in, runs built-in commands, runs custom code
  */
 playerCommand = (playerId, command) => {
     return false
