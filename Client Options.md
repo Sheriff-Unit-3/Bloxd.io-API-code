@@ -357,6 +357,12 @@ RightInfoText = ""
  */
 touchscreenActionButton = null
 ```
+```js
+/**
+ * Text to display at the crosshair's location. Supports custom text styling.
+ * @type {string | CustomTextStyling}
+ */
+crosshairText = ""
 
 ### Inventory Options
 ```js
