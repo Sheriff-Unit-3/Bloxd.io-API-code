@@ -82,7 +82,20 @@ Here is the full list of available entity settings:
  */
 opacity = 1
 ```
-
+```js
+/**
+ * Rendering order of the entity, higher zIndex renders on top of lower ones.
+ * @type {0 | 1}
+ */
+zIndex = 0
+```
+```js
+/**
+ * Applies a colour tint to the entity when set, like the red tint when an entity gets hurt.
+ * @type {string}
+ */
+overlayColour = null
+```
 ```js
 /**
  * Whether the entity can attack other entities, ignored if the targeted entity is invincible
