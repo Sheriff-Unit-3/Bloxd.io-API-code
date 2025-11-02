@@ -402,7 +402,41 @@ metaInfo = ""
 
 ## Mob Types and Variations
 > [!NOTE]
-> This is not from the offical documentation, this was put together by NlGBOB
+> From the offical documentation:
+
+Some mob types support variations other than just `"default"`:
+
+```js
+Pig: "default"
+Cow: "default", "cream"
+Sheep: "default"
+Horse: "default", "black", "brown", "cream"
+Cave Golem: "default", "iron"
+Draugr Zombie: "default", "longHairChestplate", "longHairClothed", "shortHairClothed"
+Draugr Skeleton: "default"
+Frost Golem: "default"
+Frost Zombie: "default", "longHairChestplate", "shortHairClothed"
+Frost Skeleton: "default"
+Draugr Knight: "default"
+Wolf: "default", "white", "brown", "grey", "spectral"
+Bear: "default"
+Deer: "default"
+Stag: "default"
+Gold Watermelon Stag: "default"
+Gorilla: "default"
+Wildcat: "default", "tabby", "grey", "black", "calico", "siamese", "leopard"
+Magma Golem: "default"
+Draugr Huntress: "default", "chainmail"
+Spirit Golem: "default"
+Spirit Wolf: "default"
+Spirit Bear: "default"
+Spirit Stag: "default"
+Spirit Gorilla: "default"
+```
+
+> [!WARNING]
+> This is not from the offical documentation, this was put together by NlGBOB.
+> Also this has not been updated with the spirt mobs.
 
 ```json
 {
@@ -442,31 +476,4 @@ metaInfo = ""
   "Magma Golem": ["default"],
   "Pig": ["default"]
 }
-```
-> [!NOTE]
-> From the offical documentation:
-
-Some mob types support variations other than just `"default"`:
-
-```js
-Pig: "default"
-Cow: "default", "cream"
-Sheep: "default"
-Horse: "default", "black", "brown", "cream"
-Cave Golem: "default", "iron"
-Draugr Zombie: "default", "longHairChestplate", "longHairClothed", "shortHairClothed"
-Draugr Skeleton: "default"
-Frost Golem: "default"
-Frost Zombie: "default", "longHairChestplate", "shortHairClothed"
-Frost Skeleton: "default"
-Draugr Knight: "default"
-Wolf: "default", "white", "brown", "grey", "spectral"
-Bear: "default"
-Deer: "default"
-Stag: "default"
-Gold Watermelon Stag: "default"
-Gorilla: "default"
-Wildcat: "default", "tabby", "grey", "black", "calico", "siamese", "leopard"
-Magma Golem: "default"
-Draugr Huntress: "default", "chainmail"
 ```
