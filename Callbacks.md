@@ -71,10 +71,13 @@ onPlayerLeave = (playerId, serverIsShuttingDown) => {}
  */
 onPlayerJump = (playerId) => {}
 ```
+> [!NOTE]
+> That as of 11/06/25 (mm/dd/yy) this callback does not get triggered when the player already has a spawn point set.
+
 ### onRespawnRequest
 ```js
 /**
- * Called when a player requests to respawn.
+ * Called when a player requests to respawn, unless they have a spawn point set.
  * Optionally return the respawn location. Defaults to [0, 0, 0].
  * Return true to handle yourself (good for async,
  * but be careful that the player isn't at the place they died,
