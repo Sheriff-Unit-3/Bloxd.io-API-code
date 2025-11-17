@@ -53,6 +53,7 @@ Here is the full list of available client options:
 > [!NOTE]
 > This list has been reorganized compared to the Official documentation, but all the Client Options are here.
 
+
 ### Can Options
 ```js
 /**
@@ -117,6 +118,13 @@ canSeeNametagsThroughWalls = true
  * @type {boolean}
  */
 canPickBlocks = true
+```
+```js
+/**
+ * Whether the player can climb walls
+ * @type {boolean}
+ */
+canClimbWalls = false
 ```
 
 ### Can't Options
@@ -251,6 +259,15 @@ jumpAmount = 8
 airJumpCount = 0
 ```
 
+```js
+/**
+ * How much the player bounces off of solid blocks.
+ * A value of 1 is equivalent to every block acting as a mushroom.
+ * @type {number}
+ */
+bounciness = 0
+```
+
 ### Bunnyhop Options
 ```js
 /**
@@ -306,6 +323,23 @@ zoomOutDistance = 3
  * @type {number}
  */
 maxPlayerZoom = 15
+```
+
+### Fog Options
+```js
+/**
+ * Fog distance which overrides graphic settings. Uses graphic settings if null.
+ * @type {number}
+ */
+fogChunkDistanceOverride = null
+```
+
+```js
+/**
+ * RGB string for fog colour override. e.g. #ffffff
+ * @type {string}
+ */
+fogColourOverride = null
 ```
 
 ### Leaderboard Options
@@ -576,13 +610,45 @@ dealingDamageDefaultMultiplier = 1
  */
 receivingDamageMultiplier = 1
 ```
-
+#### Fall Damage Options
 ```js
 /**
  * Whether to deal damage to the player when they fall
  * @type {boolean}
  */
 fallDamage = false
+```
+#### Stomp Damage Options
+```js
+/**
+ * Mult for the damage done by "stomping" on a lifeform, i.e.: falling on them wearing Spiked Boots.
+ * @type {number}
+ */
+stompDamageMultiplier = 0
+```
+```js
+/**
+ * Radius around the player that will be affected by the stomp damage.
+ * @type {number}
+ */
+stompDamageRadius = 0
+```
+
+### Knockback Options
+```js
+/**
+ * Multiplier for horizontal knockback when dealing damage
+ * @type {number}
+ */
+horizontalKnockbackMultiplier = 1
+```
+
+```js
+/**
+ * Multiplier for vertical knockback when dealing damage
+ * @type {number}
+ */
+verticalKnockbackMultiplier = 1
 ```
 
 ### Kart Options
@@ -703,6 +769,14 @@ maxAuraLevel = 0
 ```
 
 ### Misc
+```js
+/**
+ * Mult for the radius within which mobs can detect the player when crouching.
+ * If a player's mult is 2, then mobs will think they are twice as far away.
+ * @type {number}
+ */
+crouchMobDetectionRadiusMultiplier = 2
+```
 ```js
 /**
  * Allows player to select a channel that is passed as argument to onPlayerChat. See SharedTypes.ts for expected format
