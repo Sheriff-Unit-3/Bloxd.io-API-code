@@ -1,6 +1,6 @@
 # All font Awesome Icons supported by Bloxd.io  
 > [!NOTE]
-> That this list only includes icons that Bloxd.io supports, this is not ment to be a list of all icons in font Awesome.  
+> That this list only includes icons that Bloxd.io supports, this is not ment to be a list of all icons in [Font Awesome](https://fontawesome.com/search).  
 ## Credits  
 Thank you to: WBSTP & FrostyCaveman for creating and posting this.  
 ### A  
