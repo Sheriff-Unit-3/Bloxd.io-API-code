@@ -396,7 +396,8 @@ calcExplosionForce(eId, explosionType, knockbackFactor, explosionRadius, explosi
 
 ### Player functions
 > [!NOTE]
-> This contains functions that use playerId, or affect only players. For example `broadcastMessage` is included in here cause only players read chat.  
+> This contains functions that use playerId, or affect only players. For example `broadcastMessage` is included in here cause only players read chat.
+ 
 > [!NOTE]
 > These fuctions work only on players, but entity functions will work on them too.  
 ```js
