@@ -382,6 +382,16 @@ middleTextLower = ""
  * @type {string | CustomTextStyling}
  */
 RightInfoText = ""
+
+// RightInfoText example:
+
+api.setClientOption(playerId, "RightInfoText", [
+     {str: "text"}, // simple line of text
+     "\n", // adds an extra line
+     {str: "text",style:{color:"red"}}, // simple line of colored text
+     "\n", // adds extra line
+     {str:"text "+var,style:{color:'green'}} // colored text with a var added to it
+    ])
 ```
 
 ```js
