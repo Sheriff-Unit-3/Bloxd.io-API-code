@@ -26,6 +26,9 @@ To use a callback, just assign a function to it in the world code!
 tick = () => {}			 or			 function tick() {}
 ```
 
+You can use `api.setCallbackValueFallback("callbackName", defaultValue)` to set a default value to be returned by your callback code if it throws an error.
+
+
 > [!NOTE]
 > Below is all the callbacks that you can use in Bloxd.io, there are headers above each.
 

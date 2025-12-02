@@ -5,6 +5,12 @@
 ## Credits
 Thank you to Tom for creating this.
 
+## Global Variables
+`myId` & `playerId`: Store the player ID of who is running the code.  
+`thisPos`: Stores the position of the currently executing code block or press to code board. 
+`ownerDbId`: Stores the lobby owner's DbId.
+
+
 ## API functions  
 Global object `api` has the following methods:
 
@@ -353,8 +359,8 @@ removeEffect(lifeformId, name)
  * @param {EntityNamedNode} node - node to attach to
  * @param {PNull<MeshType>} type - if null, detaches mesh from this node
  * @param {MeshEntityOpts[MeshType]} [opts]
- * @param {number[]} [offset]
- * @param {number[]} [rotation]
+ * @param {[number, number, number]} [offset]
+ * @param {[number, number, number]} [rotation]
  * @returns {void}
  */
 updateEntityNodeMeshAttachment(eId, node, type, opts, offset, rotation)
@@ -557,7 +563,7 @@ sendMessage(playerId, message, style)
  *
  * @param {PlayerId} playerId - Id of the player
  * @param {CustomTextStyling} message - The text contained within the message. Can use `Custom Text Styling`.
- * @param {number} distanceFromAction - The distance from the action that has caused this message to be displayed, this value
+ * @param {number} distanceFromAction - The distance from the action that has caused this message to be displayed, this value will be used to determine how the message flies across the screen.
  * @returns {void}
  */
 sendFlyingMiddleMessage(playerId, message, distanceFromAction)
@@ -761,6 +767,7 @@ setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer, playerIdOfOpacityPla
  * @param {PlayerId} playerId
  * @param {number} toFraction - The fraction of the progress bar you want to be filled up.
  * @param {number} [toDuration] - The time it takes for the bar to reach the given toFraction in ms.
+ * If this is too low and you queue multiple updates, this toFraction could be skipped. Treat 200ms as a minimum.
  * @returns {void}
  */
 progressBarUpdate(playerId, toFraction, toDuration)
@@ -854,7 +861,7 @@ scalePlayerMeshNodes(playerId, nodeScales)
  * @param {PlayerPose} pose
  * @returns {void}
  */
-setPlayerPose(playerId, pose)
+setPlayerPose(playerId, pose, poseOffset)
 ```
 
 ```js
@@ -892,6 +899,7 @@ setCameraZoom(playerId, zoom)
  * @param {string} soundName - Can also be a prefix. If so, a random sound with that prefix will be played
  * @param {number} volume - 0-1. If it's too quiet and volume is 1, normalise your sound in audacity
  * @param {number} rate - The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch
+ * Good for varying the sound. E.g. item pickup sound has a random rate between 1 and 1.5.
  * @param { {
  *     playerIdOrPos: PlayerId | number[]
  *     maxHearDist?: number
@@ -1013,6 +1021,16 @@ setAuraLevel(playerId, level)
 applyAuraChange(playerId, auraDiff)
 ```
 
+### Callback Functions
+/**
+ * Set a default value to be returned by your callback code if it throws an error.
+ *
+ * @param {string} callbackName
+ * @param {any} defaultValue
+ */
+api.setCallbackValueFallback(callbackName, defaultValue)
+
+
 ### Mob functions
 > [!NOTE]
 > These functions only work on mobs, but entity functions will also work on them too.  
@@ -1039,7 +1057,11 @@ createMobHerd()
  *     name: string
  *     playSoundOnSpawn: boolean
  *     variation: MobVariation<TMobType>
- *     }>} [opts] - Includes:
+ *     physicsOpts: Partial<{
+ *         width: number
+ *         height: number
+ *     }>
+ * }>} [opts]
  * @returns {PNull<MobId>}
  */
 attemptSpawnMob(mobType, x, y, z, opts)
@@ -1892,9 +1914,7 @@ type EntityName = {
 ```
 
 ```js
-type gameIcons = [
-"Air Walk", "Antlers Bonus", "Arrow Damage Enchantment", "Arrow Speed Enchantment", "Attack Speed Enchantment", "Blindness", "Boating", "Bounciness", "Brain Rot", "Break Speed Enchantment", "Bunny Hop", "Critical Damage Enchantment", "Cross", "Damage Enchantment", "Damage Reduction", "Damage", "Digging Aura Enchantment", "Dotted Friendship", "Double Jump", "Double Poop", "Empty Hunger", "FallDamage", "Farming Aura Enchantment", "Farming Yield Enchantment", "Feather Falling", "Feed Aura", "Fist", "Friends", "Friendship", "Frozen", "Gliding", "Haste", "Health Enchantment", "Health Regen Enchantment", "Health Regen", "Health", "HealthShield", "Heat Resistance", "Horizontal Knockback Enchantment", "Hunger", "Hydrated", "Invisible", "Jump Boost", "Knockback Resist Enchantment", "Lifesteal", "Lumber Aura Enchantment", "Max Health", "Mining Aura Enchantment", "Mining Yield Enchantment", "Mining Yield", "Mob Slayer", "Mob Yield", "Momentum Enchantment", "Obsidian Boating", "Pack Leader", "Pickpocketer", "Pixelated Heart", "Poison Claws", "Poisoned", "Protection Enchantment", "Question Mark", "Quick Charge Enchantment", "Rainbow Wool", "Rested Aura", "Rested Damage", "Rested Farming Yield", "Rested Haste", "Rested Speed", "Riding Speed", "Riding", "Self Yield", "Slowness", "Speed", "Stomp Damage Enchantment", "Thief", "Thorns", "Vertical Knockback Enchantment", "VoidJump", "Wall Climbing", "Weakness", "X_Ray Vision"
-];
+type IngameIconName = "Damage" | "Damage Reduction" | "Speed" | "VoidJump" | "Fist" | "Frozen" | "Hydrated" | "Invisible" | "Jump Boost" | "Poisoned" | "Slowness" | "Weakness" | "Health Regen" | "Haste" | "Double Jump" | "Heat Resistance" | "Gliding" | "Boating" | "Obsidian Boating" | "Riding" | "Bunny Hop" | "FallDamage" | "Feather Falling" | "Thief" | "X-Ray Vision" | "Mining Yield" | "Brain Rot" | "Rested Damage" | "Rested Haste" | "Rested Speed" | "Rested Farming Yield" | "Rested Aura" | "Blindness" | "Pickpocketer" | "Lifesteal" | "Bounciness" | "Air Walk" | "Wall Climbing" | "Thorns" | "Draugr Knight Head" | "Damage Enchantment" | "Critical Damage Enchantment" | "Attack Speed Enchantment" | "Protection Enchantment" | "Health Enchantment" | "Health Regen Enchantment" | "Stomp Damage Enchantment" | "Knockback Resist Enchantment" | "Arrow Speed Enchantment" | "Arrow Damage Enchantment" | "Quick Charge Enchantment" | "Break Speed Enchantment" | "Momentum Enchantment" | "Mining Yield Enchantment" | "Farming Yield Enchantment" | "Mining Aura Enchantment" | "Digging Aura Enchantment" | "Lumber Aura Enchantment" | "Farming Aura Enchantment" | "Vertical Knockback Enchantment" | "Horizontal Knockback Enchantment" | "Self Yield" | "Friends" | "Riding Speed" | "Feed Aura" | "Double Poop" | "Mob Slayer" | "Rainbow Wool" | "Pack Leader" | "Max Health" | "Poison Claws" | "Mob Yield" | "Antlers Bonus" | "Health" | "HealthShield" | "Cross" | "Friendship" | "Dotted Friendship" | "Hunger" | "Empty Hunger" | "Pixelated Heart" | "Question Mark"
 ```
 
 ```js
@@ -1995,7 +2015,7 @@ type EarthSkyBox = {
     type: "earth"
     inclination?: number
     turbidity?: number
-    infiniteDistance?: number
+    infiniteDistance?: boolean
     luminance?: number
     yCameraOffset?: number
     azimuth?: number
