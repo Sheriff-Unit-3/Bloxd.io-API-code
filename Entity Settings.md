@@ -77,7 +77,7 @@ Here is the full list of available entity settings:
 /**
  * Opacity of the entity
  * Fractional values are currently treated as 1 for performance reasons
- * 0 opacity will hide the entity but not its name tag
+ * 0 opacity will hide the entity and its name tag
  * @type {number}
  */
 opacity = 1
