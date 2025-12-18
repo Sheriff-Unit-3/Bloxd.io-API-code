@@ -407,6 +407,7 @@ touchscreenActionButton = null
  * @type {string | CustomTextStyling}
  */
 crosshairText = ""
+```
 
 ### Inventory Options
 ```js
