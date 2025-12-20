@@ -1022,6 +1022,7 @@ applyAuraChange(playerId, auraDiff)
 ```
 
 ### Callback Functions
+```js
 /**
  * Set a default value to be returned by your callback code if it throws an error.
  *
@@ -1029,7 +1030,7 @@ applyAuraChange(playerId, auraDiff)
  * @param {any} defaultValue
  */
 api.setCallbackValueFallback(callbackName, defaultValue)
-
+```
 
 ### Mob functions
 > [!NOTE]
