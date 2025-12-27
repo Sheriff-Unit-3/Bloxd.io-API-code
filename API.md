@@ -104,7 +104,7 @@ applyHealthChange(lifeformId, changeAmount, whoDidDamage, broadcastLifeformHurt)
  * If you want to set their health to more than their current max health, the optional increaseMaxHealthIfNeeded must be true.
  *
  * @param {EntityId} entityId
- * @param {PNull<number>} newHealth - Can be null to make the player not have health
+ * @param {number} newHealth - Can be null to make the player not have health
  * @param { LifeformId | { lifeformId: LifeformId; withItem: string } } [whoDidDamage] - Optional
  * @param {boolean} [increaseMaxHealthIfNeeded] - Optional
  * @returns {boolean} - Whether this change in health killed the player
@@ -119,10 +119,10 @@ setHealth(entityId, newHealth, whoDidDamage, increaseMaxHealthIfNeeded)
  * @param {LifeformId} hittingEId
  * @param {LifeformId} hitEId
  * @param {number[]} dirFacing
- * @param {PNull<PlayerBodyPart>} [bodyPartHit]
+ * @param {<PlayerBodyPart>} [bodyPartHit]
  * @param { {
- *    damage?: PNull<number>
- *    heldItemName?:PNull<string>
+ *    damage?: number
+ *    heldItemName?:<string>
  *    horizontalKbMultiplier?: number
  *    verticalKbMultiplier?: number
  * } } [overrides]
@@ -251,7 +251,7 @@ getEntityName(entityId)
  * If you use await/async or promises and do not check this, your game could have closed and then the rest of your
  * async code executes.
  *
- * @param {PNull<EntityId>} [entityId]
+ * @param {<EntityId>} [entityId]
  * @returns {boolean}
  */
 checkValid(entityId)
@@ -357,7 +357,7 @@ removeEffect(lifeformId, name)
  * Attach/detach mesh instances to/from an entity
  * @param {EntityId} eId
  * @param {EntityNamedNode} node - node to attach to
- * @param {PNull<MeshType>} type - if null, detaches mesh from this node
+ * @param {<MeshType>} type - if null, detaches mesh from this node
  * @param {MeshEntityOpts[MeshType]} [opts]
  * @param {[number, number, number]} [offset]
  * @param {[number, number, number]} [rotation]
@@ -439,7 +439,7 @@ playerIsLoggedIn(playerId)
  * as the playerIds if available, of the party leader and members.
  *
  * @param {PlayerId} playerId
- * @returns {PNull<{ playerDbIds: PlayerDbId[] }>}
+ * @returns {<{ playerDbIds: PlayerDbId[] }>}
  */
 getPlayerPartyWhenJoined(playerId)
 ```
@@ -656,7 +656,7 @@ playParticleEffect(opts, clientPredictedBy)
 /**
  * Given the name of a player, get their id
  * @param {string} playerName
- * @returns {PNull<PlayerId>}
+ * @returns {<PlayerId>}
  */
 getPlayerId(playerName)
 ```
@@ -676,7 +676,7 @@ getPlayerDbId(playerId)
  * Returns null if player not in lobby
  *
  * @param {PlayerDbId} dbId
- * @returns {PNull<PlayerId>}
+ * @returns {<PlayerId>}
  */
 getPlayerIdFromDbId(dbId)
 ```
@@ -1063,7 +1063,7 @@ createMobHerd()
  *         height: number
  *     }>
  * }>} [opts]
- * @returns {PNull<MobId>}
+ * @returns {<MobId>}
  */
 attemptSpawnMob(mobType, x, y, z, opts)
 ```
@@ -1190,7 +1190,7 @@ setBlock(x, y, z, blockName)
  * This ends up calling the onWorldChangeBlock and only makes the change if not prevented by game/plugins.
  * initiatorDbId is null if the change was initiated by the game code.
  *
- * @param {PNull<PlayerDbId>} initiatorDbId
+ * @param {<PlayerDbId>} initiatorDbId
  * @param {number} x
  * @param {number} y
  * @param {number} z
@@ -1251,7 +1251,7 @@ setBlockWalls(pos1, pos2, blockName, hasFloor, hasCeiling)
  * The ndarray should only be read from, writing to it will result in desync between the server and client
  *
  * @param {number[]} pos - The returned chunk contains pos
- * @returns {PNull<GameChunk>} - null if the chunk is not loaded in a persisted world. ReturnedObject.blockData is an ndarray that can be accessed
+ * @returns {<GameChunk>} - null if the chunk is not loaded in a persisted world. ReturnedObject.blockData is an ndarray that can be accessed
  */
 getChunk(pos)
 ```
@@ -1287,7 +1287,7 @@ getMetaInfo(blockName)
  *
  * @param {string} blockName
  * @param {boolean} [allowInvalidBlock] - Don't throw an error if the block name is invalid.
- * @returns {PNull<number>}
+ * @returns {number}
  */
 blockNameToBlockId(blockName, allowInvalidBlock)
 ```
@@ -1509,11 +1509,11 @@ getBlockData(x, y, z)
  * @param {number} y
  * @param {number} z
  * @param {string} itemName - Name of the item. Valid names can be found in blockMetadata.ts and itemMetadata.ts
- * @param {PNull<number>} [amount] - The amount of the item to include in the drop - so when the player picks up the item drop, they get this many of the item.
+ * @param {number} [amount] - The amount of the item to include in the drop - so when the player picks up the item drop, they get this many of the item.
  * @param {boolean} [mergeItems] - Whether to merge the item into an nearby item of same type, if one exists. Defaults to false.
  * @param {ItemAttributes} [attributes] - Attributes of the item being dropped
  * @pram {number} [timeTillDespawn] - Time till the item automatically despawns in millisecounds. Max of 5 mins.
- * @returns {PNull<EntityId>} - the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
+ * @returns {<EntityId>} - the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
  */
 createItemDrop(x, y, z, itemName, amount, mergeItems, attributes, timeTillDespawn)
 ```
@@ -1555,7 +1555,7 @@ getInitialItemMetadata(itemName)
  * If null is passed for lifeformId, this is simply its entry in blockMetadata etc.
  *
  *
- * @param {PNull<LifeformId>} LifeformId
+ * @param {<LifeformId>} LifeformId
  * @param {string} itemName
  * @param {K} stat
  * @returns {AnyMetadataItem[K]}
@@ -1590,7 +1590,7 @@ inventoryIsFull(playerId)
  * @param {PlayerId} playerId
  * @param {number} itemSlotIndex - 0-indexed
  * @param {string} itemName - Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param {PNull<number>} [itemAmount] - -1 for infinity. Should not be set, or null, for items that are not stackable.
+ * @param {number} [itemAmount] - -1 for infinity. Should not be set, or null, for items that are not stackable.
  * @param {ItemAttributes} [attributes] - An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
  * @param {boolean} [tellClient] - whether to tell client about it - results in desync between client and server if client doesnt locally perform the same action
  * @returns {void}
@@ -1612,11 +1612,11 @@ removeItemName(playerId, itemName, amount)
 /**
  * Get the item at a specific index
  * Returns null if there is no item at that index
- * If there is an item, return an object of the format { name: string; amount: PNull<number>; attributes: ItemAttributes; }
+ * If there is an item, return an object of the format { name: string; amount: number; attributes: ItemAttributes; }
  *
  * @param {PlayerId} playerId
  * @param {number} itemSlotIndex
- * @returns {PNull<InvenItem>}
+ * @returns {<InvenItem>}
  */
 getItemSlot(playerId, itemSlotIndex)
 ```
@@ -1675,7 +1675,7 @@ getSelectedInventorySlotI(playerId)
  * If an item is held, return an object of the format {name: itemName, amount: amountOfItem}
  *
  * @param {PlayerId} playerId
- * @returns {PNull<InvenItem>}
+ * @returns {<InvenItem>}
  */
 getHeldItem(playerId)
 ```
@@ -1698,7 +1698,7 @@ getInventoryFreeSlotCount(playerId)
  * @param {number} chestX
  * @param {number} chestY
  * @param {number} chestZ
- * @returns {PNull<boolean>}
+ * @returns {<boolean>}
  */
 canOpenStandardChest(playerId, chestX, chestY, chestZ)
 ```
@@ -1722,7 +1722,7 @@ giveStandardChestItem(chestPos, itemName, itemAmount, playerId, attributes)
  * Returns null for non-chests
  *
  * @param {number[]} chestPos
- * @returns {PNull<number>} - number
+ * @returns {number} - number
  */
 getStandardChestFreeSlotCount(chestPos)
 ```
@@ -1743,7 +1743,7 @@ getStandardChestItemAmount(chestPos, itemName)
  *
  * @param {number[]} chestPos
  * @param {number} idx
- * @returns {PNull<InvenItem>}
+ * @returns {<InvenItem>}
  */
 getStandardChestItemSlot(chestPos, idx)
 ```
@@ -1752,7 +1752,7 @@ getStandardChestItemSlot(chestPos, idx)
  * Get all the items from a standard chest in order. Use this instead of repetitive calls to getStandardChestItemSlot
  *
  * @param {number[]} chestPos
- * @returns {PNull<InvenItem>[]}
+ * @returns {<InvenItem>[]}
  */
 getStandardChestItems(chestPos)
 ```
@@ -1776,7 +1776,7 @@ setStandardChestItemSlot(chestPos, idx, itemName, itemAmount, playerId, attribut
  *
  * @param {PlayerId} playerId
  * @param {number} idx
- * @returns {PNull<InvenItem>}
+ * @returns {<InvenItem>}
  */
 getMoonstoneChestItemSlot(playerId, idx)
 ```
@@ -1787,7 +1787,7 @@ getMoonstoneChestItemSlot(playerId, idx)
  * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
  *
  * @param {PlayerId} playerId
- * @returns {PNull<InvenItem>[]}
+ * @returns {<InvenItem>[]}
  */
 getMoonstoneChestItems(playerId)
 ```
@@ -1809,18 +1809,25 @@ setMoonstoneChestItemSlot(playerId, idx, itemName, itemAmount, metadata)
  * Edit the crafting recipes for a player
  *
  * @param {PlayerId} playerId
- * @param {ItemName} itemName
+ * @param {string} itemName
  * @param {RecipesForItem} recipesForItem
  * @returns {void}
  */
-editItemCraftingRecipes(playerId, itemName, recipesForItem)
+editItemCraftingRecipes(playerId, itemName, [{
+        requires: [{ items: []; amt: number }],
+        produces: number,
+        station?: string | string[],
+        onCraftedAura?: number,
+        isStarterRecipe?: boolean
+    }]
+)
 ```
 ```js
 /**
  * Reset the crafting recipes for a given back to its original bloxd state
  *
  * @param {PlayerId} playerId
- * @param {PNull<string>} itemName - Resets all crafting recipes for the given player if null, otherwise restes the crafting recipes for the given  item.
+ * @param {string} itemName - Resets all crafting recipes for the given player if null, otherwise restes the crafting recipes for the given  item.
  * @returns {void}
  */
 resetItemCraftingRecipes(playerId, itemName)
@@ -1831,7 +1838,7 @@ resetItemCraftingRecipes(playerId, itemName)
  * Removes crafting recipes
  *
  * @param {PlayerId} playerId
- * @param {PNull<string>} itemName - Removes all the crafting recipes for the given player if null, otherwise removes the crafting reipes for the given item.
+ * @param {string} itemName - Removes all the crafting recipes for the given player if null, otherwise removes the crafting reipes for the given item.
  * @returns {void}
  */
 removeItemCraftingRecipes(playerId, itemName)
@@ -1859,7 +1866,7 @@ now()
 ```js
 /**
  * Get the name of the lobby this game is running in.
- * @returns {PNull<string>}
+ * @returns {string}
  */
 getLobbyName()
 ```
@@ -1901,7 +1908,7 @@ type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | St
 ```
 
 ```js
-type EntityMeshScalingMap = { [key in "TorsoNode" | "HeadMesh" | "ArmRightMesh" | "ArmLeftMesh" | "LegLeftMesh" | "LegRightMesh"]?: number[] }
+type EntityMeshScalingMap = { [key in "TorsoNode" | "HeadMesh" | "ArmRightMesh" | "ArmLeftMesh" | "LegLeftMesh" | "LegRightMesh"]?: [number] }
 ```
 
 ```js
@@ -1934,15 +1941,13 @@ enum ParticleSystemBlendMode {
 ```
 
 ```js
-type RecipesForItem = RecursiveReadonly<
-    {
-        requires: { items: string[]; amt: number }[]
+type RecipesForItem = [{
+        requires: [{ items: string[]; amt: number }]
         produces: number
         station?: string | string[]
         onCraftedAura?: number
         isStarterRecipe?: boolean
-    }[]
->
+    }]
 ```
 
 ```js
@@ -2039,7 +2044,7 @@ enum WalkThroughType {
 
 ```js
 type WorldBlockChangedInfo = {
-    cause: PNull<"Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion">
+    cause: <"Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion">
 }
 ```
 
