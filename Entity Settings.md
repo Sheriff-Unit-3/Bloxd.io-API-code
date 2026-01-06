@@ -157,8 +157,30 @@ lobbyLeaderboardValues = {}
  * The name tag info of the player:
  * {
  *     backgroundColor?: string
- *     content?: StyledText[]
- *     subtitle?: StyledText[]
+ *     content?: [{
+            str: string | EntityName | TranslatedText
+            style?: {
+                color?: string
+                colour?: string
+                fontWeight?: string
+                fontSize?: string
+                fontStyle?: string
+                opacity?: number
+            }
+            clickableUrl?: string
+       }]
+ *     subtitle?: [{
+            str: string | EntityName | TranslatedText
+            style?: {
+                color?: string
+                colour?: string
+                fontWeight?: string
+                fontSize?: string
+                fontStyle?: string
+                opacity?: number
+            }
+            clickableUrl?: string
+       }]
  *     subtitleBackgroundColor?: string
  * }
  * @type {NameTagInfo}
@@ -196,7 +218,20 @@ type EntityName = {
     }
 }
 ```
-
+```js
+type StyledText = {
+    str: string | EntityName | TranslatedText
+    style?: {
+        color?: string
+        colour?: string
+        fontWeight?: string
+        fontSize?: string
+        fontStyle?: string
+        opacity?: number
+    }
+    clickableUrl?: string
+}
+```
 ```js
 type MeshTypes = [null, BloxdBlock, ParticleEmitter]
 ```
