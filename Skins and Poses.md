@@ -1,5 +1,5 @@
 # Skins
-`zombie`, `trader`, `trader_blue`, `trader_black`, `wizard`, `portal_mage`
+`zombie`, `trader`, `trader_blue`, `trader_black`, `wizard`, `portal_mage`, `piggy_banker`, `farmer`
 > [!NOTE]
 > Anything with 'none' can't be used.
 
