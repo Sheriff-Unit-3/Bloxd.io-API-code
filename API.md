@@ -10,6 +10,21 @@ Thank you to Tom for creating this.
 `thisPos`: Stores the position of the currently executing code block or press to code board. 
 `ownerDbId`: Stores the lobby owner's DbId.
 
+## Built-in Functions
+```js
+/**
+ * Runs a string as if it were a script.
+ * Can be used to read code blocks from World Code or from another Code Block.
+ * @param {string} ""
+ * @returns The completed code.
+eval(string)
+```
+Example of `eval` being used to read Code Block's code
+```js
+// Code Block or in callback in World Code
+let code = api.getBlockData(0, 0, 0) // (0, 0, 0) must be the location of the Code Block.
+eval(code) // Note that this will not work as expected if that block's data is not JavaScript code.
+```
 
 ## API functions  
 Global object `api` has the following methods:
